@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lambda Locator missing cache utility</title>
+    <script type="text/javascript">
+      function inputHandler(el){
+          var out = document.getElementById("output");
+          var input = el.value.trim();
+          var re = /^0x[0-9a-f]{16}$/i;
+          if (!re.test(input)) {
+              out.innerText = "Malformed input. Expecting \"0x\" followed by 16 hexadecimal characters (e.g. 0x00001FFFFFFFFFFF).";
+              return;
+          }
+
+          var bits = hexToBitArray(input);
+          missed = [];
+          for (let i = 0; i<45; i++)
+              if (!bits[i])
+                  missed.push(i+1);
+          let text = (45 - missed.length) + "/45 locations found.";
+
+          if (missed.length > 0)
+              text += "\n\nMissing " + missed.length + " locations: " + missed.join(", ")
+          else
+              text += " Congratulations!";
+
+          out.innerText = text;
+      }
+      function hexToBitArray(str){
+          var values = str.match(/[0-9a-f]{8}/gi).map(s=>parseInt(s,16)).reverse();
+          var bitArray = [];
+          for (let value of values)
+              for (let i=0; i<32; i++)
+                  bitArray.push((value & (1<<i)) != 0);
+          return bitArray;
+      }
+      window.addEventListener("load", e=>document.getElementById("input").oninput());
+    </script>
+  </head>
+  <body>
+    <h1>Lambda Locator missing cache utility</h1>
+    <input id="input" type="text" name="value" oninput="inputHandler(this);">
+    <p>Output:</p>
+    <p id="output">Waiting for input.</p>
+  </body>
+</html>
