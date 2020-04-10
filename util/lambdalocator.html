@@ -2,18 +2,64 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Lambda Locator missing cache utility</title>
+    <title>Half-Life 2 - Lambda Locator missing cache utility</title>
+    <style type="text/css">
+      html {
+          font-family: "sans-serif";
+      }
+      body {
+          min-height: 100vh;
+      }
+      .light {
+          color: gray;
+      }
+      .small {
+          font-size: 0.8em;
+      }
+      #output {
+          font-family: monospace;
+          background-color: #EFE;
+          font-size: 1.3em;
+          width: fit-content;
+      }
+      #output.error {
+          background-color: #FEE;
+      }
+    </style>
     <script type="text/javascript">
-      function inputHandler(el){
-          var out = document.getElementById("output");
-          var input = el.value.trim();
-          var re = /^0x[0-9a-f]{16}$/i;
-          if (!re.test(input)) {
-              out.innerText = "Malformed input. Expecting \"0x\" followed by 16 hexadecimal characters (e.g. 0x00001FFFFFFFFFFF).";
+      function stopEvent(event){
+          event.stopPropagation();
+          event.preventDefault();
+      }
+
+      function setOutput(innerText, error=false, id="output"){
+          let out = document.getElementById(id);
+          out.innerText = innerText;
+          if(error)
+              out.classList.add("error")
+          else
+              out.classList.remove("error");
+      }
+
+      function textboxInputHandler(el){
+          let input = el.value.trim();
+          let re = /^0x[0-9a-f]{16}$/i;
+
+          if (input.length == 0) {
+              setOutput("Waiting for input.");
               return;
           }
 
-          var bits = hexToBitArray(input);
+          if (!re.test(input)) {
+              setOutput("Malformed input.\nExpecting \"0x\" followed by 16 hexadecimal characters (e.g. 0x00001BDBE3B7D7FD).", true);
+              return;
+          }
+
+          mainFunction(input);
+      }
+
+      function mainFunction(input){
+          let bits = hexToBitArray(input);
           missed = [];
           for (let i = 0; i<45; i++)
               if (!bits[i])
@@ -24,24 +70,79 @@
               text += "\n\nMissing " + missed.length + " locations: " + missed.join(", ")
           else
               text += " Congratulations!";
-
-          out.innerText = text;
+          setOutput(text);
       }
+
       function hexToBitArray(str){
-          var values = str.match(/[0-9a-f]{8}/gi).map(s=>parseInt(s,16)).reverse();
-          var bitArray = [];
+          let values = str.match(/[0-9a-f]{8}/gi).map(s=>parseInt(s,16)).reverse();
+          let bitArray = [];
           for (let value of values)
               for (let i=0; i<32; i++)
                   bitArray.push((value & (1<<i)) != 0);
           return bitArray;
       }
+
+      function processInput(input){
+          let re = /0x[0-9a-f]{16}/i;
+          let result = re.exec(input);
+          if ( result ){
+              setOutput("", false);
+              document.getElementById("input").value=result;
+              mainFunction(result[0]);
+          }
+          else
+              setOutput("Couldn't find a string with the right format.", true);
+      }
+
+      function fileInputHandler(el){
+          let file = el.files[0];
+          let maxSize = 1<<15;
+
+          if (file.size > maxSize) {
+              setOutput(`File too big: ${file.size>>10} KiBs.\nMax: ${maxSize/1024} KiBs.`, true);
+              return;
+          }
+
+          file.text().then(processInput);
+      }
+
+      function dropHandler(event){
+          stopEvent(event);
+          let fileInput = document.getElementById("file");
+          for (let item of event.dataTransfer.items){
+              if (item.kind == "file"){
+                  fileInput.files = event.dataTransfer.files;
+                  fileInputHandler(fileInput);
+                  return;
+              } else if (item.kind == "string" && item.type == "text/plain") {
+                  item.getAsString(processInput);
+                  return;
+              }
+          }
+      }
+
       window.addEventListener("load", e=>document.getElementById("input").oninput());
     </script>
   </head>
-  <body>
-    <h1>Lambda Locator missing cache utility</h1>
-    <input id="input" type="text" name="value" oninput="inputHandler(this);">
-    <p>Output:</p>
+  <body ondragenter="stopEvent(event);" ondragover="stopEvent(event)" ondrop="dropHandler(event)">
+    <h3>Half-Life 2 - Lambda Locator missing cache utility <span class="light small">by Major Gnuisance</span></h3>
+    <p>Choose one of the following methods:</p>
+    <ul>
+      <li>
+        <p>Drag and drop your gamestate.txt file anywhere on this page.</p>
+      </li>
+      <li>
+        <p>Drag and drop your hex string anywhere on this page.</p>
+      </li>
+      <li>
+        <p>Select your gamestate.txt on the box below.</p>
+        <input id="file" type="file" accept=".txt" onchange="fileInputHandler(this)">
+      </li>
+      <li>
+        <p>Fill out the hex string manually.</p>
+        <input id="input" placeholder="0x00001BDBE3B7D7FD" type="text" name="value" oninput="textboxInputHandler(this);">
+      </li>
+    </ul>
     <p id="output">Waiting for input.</p>
   </body>
 </html>
