@@ -9,12 +9,39 @@
       }
     </style>
     <script type="text/javascript">
-      function loadHandler(){ window.alert("TODO"); };
-      window.addEventListener("load", loadHandler);
+      let mappings = { "hl2ds4": "Steam%20Input/Half-Life%202/DualShock%204.html",
+                       "lambda": "util/lambdalocator.html",
+                     }
+
+      let elem = (id)=>document.getElementById(id);
+
+      function message(str){
+          elem("message").innerText = str;
+      }
+
+      function redirect(){
+          let fullhash = window.location.hash.slice(1);
+          let hash = fullhash.split("#", 1)[0];
+          let tailhash = fullhash.slice(hash.length);
+          if ( hash in mappings ) {
+              let newLocation = window.origin + "/" + mappings[hash] + tailhash;
+              message("Redirecting to " + newLocation);
+              elem("fallback").style.display = "block";
+              elem("link").href = newLocation;
+              setTimeout(() => window.location = newLocation, 3000);
+          } else {
+              message("Nowhere to redirect to.\nDid you forget or mistype the #xyz part of the URL?");
+          }
+      }
+
+      window.addEventListener("load", redirect);
+      window.addEventListener("hashchange",redirect);
     </script>
   </head>
   <body>
     <h1>Major Gnuisance's URL Shortener Page</h1>
-    Under constructions.
+    <p id="message">Waiting for page to load...</p>
+    <p id="fallback" style="display:none;">If it doesn't work automatically, <a id="link">click here</a></p>
+    <noscript>This page needs JavaScript to work.</noscript>
   </body>
 </html>
