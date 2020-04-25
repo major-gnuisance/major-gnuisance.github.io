@@ -1,33 +1,72 @@
-#+TITLE: Half-Life 2 with DualShock 4 using Steam Input
+#+TITLE: Major Gnuisance's Gyro Revolution for Half-Life 2
 #+AUTHOR: Major Gnuisance
 #+EMAIL: majorgnuisance@gmail.com
+#+OPTIONS: html-style:nil
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
 
 * Introduction
   This page will help you set up and use a modern control scheme for
-  Half-Life 2 for the DualShock 4 controller using Steam Input.
+  Half-Life 2 with a DualShock 4 controller, via Steam Input.
 
   The Installation section will show you how to set everything up.
-  The Controls section will show you how to use this control scheme.
+  The Controls section will teach you how to use this control scheme.
 
-* Resources
-  - Custom cfg file
-  - Icon pack
-  - Controller URL and VFD file
-  - Changelog
+* Resource summary
+  - Custom cfg file: [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]]
+  - Icon pack: [[file:HL2_TouchMenuIcons.zip][=HL2_TouchMenuIcons.zip=]]
+  - Controller Configuration
+    - v1.0-beta URL: =steam://controllerconfig/220/2073106958=
+    - VDF file for manual import: [[file:gyro_revolution_hl2_v1.0-beta.vdf][=gyro_revolution_hl2_v1.0-beta.vdf=]]
+  - Changelog: TODO
 
-* Installation
-  1. Install custom configuration file (TODO: LINK HERE)
-     1. Open the game's directory in Steam
-     2. Put CFGFILENAME in hl2/cfg/ directory
-     3. Add =exec CFGFILENAME= to your autoexec.cfg file
-        - If you don't have an autoexec.cfg file, use this one: LINKTOAUTOEXECFILE
-  2. Connect your DualShock 4 to your computer
-     - You can use USB or Bluetooth
-     - Detailed howto here <TODOTODOTODO
+* Installation, summarized
+  1. Extract icon pack into game's directory (=Half-Life 2=)
+  2. Put =gyro_revolution.cfg= under the =hl2/cfg/= directory
+  3. Add line with "=exec gyro_revolution=" to your =autoexec.cfg= file in the same directory (=hl2/cfg=). Create if necessary.
+  4. Connect DS4 controller
+  5. Enable PlayStation Configuration Support in Big Picture, if not already enabled
+  6. Import my configuration
+
+* Installation, detailed
+  1. Install icon pack and custom configuration file
+     1. Open the game's directory
+        - Right click game in Steam library > Manage > Browse local files\\
+          [[file:manage_browselocalfiles.png]]
+     2. Extract the [[file:HL2_TouchMenuIcons.zip][Icon Pack zip]] there. You should now have a =TouchMenuIcons= directory.
+     3. Enter the hl2/cfg/ directory and place the [[file:gyro_revolution.cfg][gyro_revolution.cfg]] file there.
+     4. Add =exec gyro_revolution= to your =autoexec.cfg= file
+        - If you don't have an =autoexec.cfg= file, use this one: *TODO*
+  2. Connect your DualShock 4 to your computer. Either:
+     - Wired using a micro USB cable
+       - Plug & Play
+     - Wireless using Bluetooth
+       - With the DualShock 4 turned off, hold OPTIONS and the PS
+         button to enter Bluetooth pairing mode, then pair it with the
+         computer.
   3. Enable DualShock 4 configuration support in Steam's Big Picture mode
-     - IMPORTANT! Calibrate your DualShock 4 to ensure your gyro aim doesn't drift.
-  4. Import my configuration <TODOTODOTODO
+     1. Start Big Picture by clicking the button to the left of the "minimize" button in Steam\\
+        [[file:bpm_button.png]]
+     2. Go to Setting > Controller Settings\\
+        [[file:bpm_settingicon.png]] [[file:bpm_controllersettings.png]]
+     3. Check "PlayStation Configuration Support" box\\
+        [[file:bpm_playstationsupport.png]]
+     4. Select your controller under "Detected Controllers" and then click *Calibrate*\\
+        [[file:bpm_controllerselected.png]]\\
+        [[file:bpm_calibratebutton.png]]
+     5. Tune your joystick deadzones if necessary\\
+        [[file:bpm_joystickdeadzone.png]]
+     6. Place the controller on a *stable, level surface* and click "Start Gyro-Only Calibration."\\
+        [[file:bpm_startgyrocalibration.png]]
+     7. Make sure the controller stays completely still until the calibration is done (about 5 seconds).
+  4. Import my configuration
+     - Using the steam:// URL
+       1. Copy this url: steam://controllerconfig/220/2073106958
+       2. Right click game in Steam library > Manage > Controller Configuration [[file:manage_controllerconfig.png]]
   5. Play the game!
+
+* Uninstallation
+  1. Remove the =exec gyro_revolution= line from your =autoexec.cfg= file
+  2. 
 
 * Control overview
 ** Basics
