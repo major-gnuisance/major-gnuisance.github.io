@@ -4,6 +4,35 @@
 #+OPTIONS: html-style:nil
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
 
+
+:init:
+#+BEGIN_SRC elisp :exports none
+
+  ;;; Support for links to steam:// URIs in Org mode
+  ;; (require 'ol)
+
+  (org-link-set-parameters "steam"
+                           :export #'org-steam-export)
+
+
+  (defun org-steam-export (link description format)
+    "Export a steam link from Org files."
+    (let ((path (concat "steam:" link))
+          (desc (or description link)))
+      (pcase format
+        (`html (format "<a target=\"_blank\" href=\"%s\">%s</a>" path desc))
+        (`md (format "[%s](%s)" desc path))
+        (`latex (format "\\href{%s}{%s}" path desc))
+        (`texinfo (format "@uref{%s,%s}" path desc))
+        (`ascii (format "%s (%s)" desc path))
+        (t path))))
+
+  ;; (provide ol-man)
+  ;;; ol-man.el ends here
+#+END_SRC
+:END:
+
+
 * Introduction
   This page will help you set up and use a modern control scheme for
   Half-Life 2 with a DualShock 4 controller, via Steam Input.
@@ -15,9 +44,9 @@
   - Custom cfg file: [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]]
   - Icon pack: [[file:HL2_TouchMenuIcons.zip][=HL2_TouchMenuIcons.zip=]]
   - Controller Configuration
-    - v1.0-beta URL: =steam://controllerconfig/220/2073106958=
+    - v1.0-beta URL: [[steam://controllerconfig/220/2073106958][=steam://controllerconfig/220/2073106958=]]
     - VDF file for manual import: [[file:gyro_revolution_hl2_v1.0-beta.vdf][=gyro_revolution_hl2_v1.0-beta.vdf=]]
-  - Changelog: TODO
+  - Changelog: *TODO*
 
 * Installation, summarized
   1. Extract icon pack into game's directory (=Half-Life 2=)
@@ -33,14 +62,14 @@
         - Right click game in Steam library > Manage > Browse local files\\
           [[file:manage_browselocalfiles.png]]
      2. Extract the [[file:HL2_TouchMenuIcons.zip][Icon Pack zip]] there. You should now have a =TouchMenuIcons= directory.
-     3. Enter the hl2/cfg/ directory and place the [[file:gyro_revolution.cfg][gyro_revolution.cfg]] file there.
-     4. Add =exec gyro_revolution= to your =autoexec.cfg= file
+     3. Enter the hl2/cfg/ directory and place the [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]] file there.
+     4. (optional) make a backup of your =config.cfg= file should you want to restore it later.
+     5. Add =exec gyro_revolution= to your =autoexec.cfg= file
         - If you don't have an =autoexec.cfg= file, use this one: *TODO*
   2. Connect your DualShock 4 to your computer. Either:
      - Wired using a micro USB cable
-       - Plug & Play
      - Wireless using Bluetooth
-       - With the DualShock 4 turned off, hold OPTIONS and the PS
+       - With the DualShock 4 turned off, hold SHARE and the PS
          button to enter Bluetooth pairing mode, then pair it with the
          computer.
   3. Enable DualShock 4 configuration support in Steam's Big Picture mode
@@ -59,49 +88,44 @@
         [[file:bpm_startgyrocalibration.png]]
      7. Make sure the controller stays completely still until the calibration is done (about 5 seconds).
   4. Import my configuration
-     - Using the steam:// URL
-       1. Copy this url: steam://controllerconfig/220/2073106958
-       2. Right click game in Steam library > Manage > Controller Configuration [[file:manage_controllerconfig.png]]
+     1. [[steam://controllerconfig/220/2073106958][Click here]] to open the configuration in Steam. It should open this screen:\\
+        [[file:bpm_configpreview.png]]
+     2. Press Square to apply, then Circle to exit
   5. Play the game!
 
 * Uninstallation
   1. Remove the =exec gyro_revolution= line from your =autoexec.cfg= file
-  2. 
+  2. Delete =config.cfg= and possibly restore a backup of it.
 
 * Control overview
 ** Basics
-   Use the *right stick* (RS) and the *gyroscope* (controller yaw/pitch
-   movement, also referred to as *gyro*) to *move the camera.*
+   Use the *right stick* and the *gyroscope* to *move the camera.*
 
-   It's recommended to *rely on the gyro to aim precisely*, relegating
+   It's recommended to rely on the gyro to aim precisely and to use
    the right stick for broader motions only, such as turning,
    recentering and coarse target acquisition.
 
-   To readjust your controller stance without moving the camera, hold
-   the right stick click (R3). This will temporarily disable the gyro
-   input.
+   The gyro is always-on by default, but you can temporarily toggle it
+   off by clicking the right stick (*R3*). This is recommended when driving.
 
-   To toggle gyro always-on, press the *SHARE* button. Gyro aiming
-   will always be enabled when holding *L2* to aim.\\
-   Pressing *R3* will reenable gyro always-on, allowing you to quickly
-   restore fine aiming in unexpected confrontations.
+   Hold *L2* to aim more precisely. Gyro is always enabled when doing this.
 
-   If the camera moves on its own, you need to *recalibrate the
-   gyroscope.*\\
-   Setting the controller on a flat surface for a while may help, but
-   running the calibration procedure in Steam Big Picture Mode's
-   settings provides better, long-lasting results.
+   If the camera moves on its own, you need to recalibrate the
+   gyroscope as explained in the detailed installation instructions.
 
-   Use the *left stick* (LS) to *move*.
-   *Tap L3* (left stick click) to *sprint* until you release the stick.
+   Use the *left stick* to *move*.\\
+   Click *L3* (left stick click) while moving to *sprint.* You will
+   stop sprinting when you return the stick to its neutral position.
 
-   *Tap X* to *jump.*
-   *Circle* to *use.*
+   *Tap X* to *jump.*\\
+   *Press Circle* to *use.*\\
    *Tap Triangle* to *toggle crouch.*
 
-   *Hold X* to *crouch after a jump*, which may help extend your reach
-   and land tricky jumps. Note: the game itself automatically crouch
-   jumps in some situations, usually next to boxes/windows/vents/etc.
+   *Hold X* to *crouch while jumping*, which may help extend your
+   reach, land tricky jumps or vault over obstacles.\\
+   Note: the game itself automatically crouch jumps in some
+   situations, usually next to boxes/windows/vents/etc. This is only
+   useful for more advanced moves.
 
    *Press OPTIONS* to *pause.*
 

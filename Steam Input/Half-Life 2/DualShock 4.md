@@ -1,26 +1,26 @@
 
 # Table of Contents
 
-1.  [Introduction](#org402fee0)
-2.  [Resource summary](#org19610dc)
-3.  [Installation, summarized](#org588a592)
-4.  [Installation, detailed](#org38845d3)
-5.  [Uninstallation](#orgaab7a07)
-6.  [Control overview](#org5667675)
-    1.  [Basics](#org9121d4c)
-        1.  [Summary](#orge806edc)
-    2.  [Weapons](#org1b1af4e)
-        1.  [Summary](#org0ef4ddc)
-    3.  [Utility](#orgcebf0a2)
-        1.  [Summary](#org45302ba)
-7.  [Feature List](#org0eb4e0b)
-8.  [Experimental features](#orgd080e00)
-9.  [Bugs/Problems](#org9cca0a1)
-10. [Possible Improvements](#org9d4db82)
+1.  [Introduction](#orge823c69)
+2.  [Resource summary](#org1c09b9b)
+3.  [Installation, summarized](#org1706d05)
+4.  [Installation, detailed](#org5ac60cb)
+5.  [Uninstallation](#orgdae2cfc)
+6.  [Control overview](#org76e9e58)
+    1.  [Basics](#org705dd42)
+        1.  [Summary](#orge2d9f33)
+    2.  [Weapons](#orgf901976)
+        1.  [Summary](#orgc909d98)
+    3.  [Utility](#orgf3cadba)
+        1.  [Summary](#org66100f6)
+7.  [Feature List](#org56ac949)
+8.  [Experimental features](#orgc46b50e)
+9.  [Bugs/Problems](#orgaba5e6e)
+10. [Possible Improvements](#orgd380f0f)
 
 
 
-<a id="org402fee0"></a>
+<a id="orge823c69"></a>
 
 # Introduction
 
@@ -31,19 +31,19 @@ The Installation section will show you how to set everything up.
 The Controls section will teach you how to use this control scheme.
 
 
-<a id="org19610dc"></a>
+<a id="org1c09b9b"></a>
 
 # Resource summary
 
 -   Custom cfg file: [`gyro_revolution.cfg`](gyro_revolution.cfg)
 -   Icon pack: [`HL2_TouchMenuIcons.zip`](HL2_TouchMenuIcons.zip)
 -   Controller Configuration
-    -   v1.0-beta URL: `steam://controllerconfig/220/2073106958`
+    -   v1.0-beta URL: [`steam://controllerconfig/220/2073106958`](steam://controllerconfig/220/2073106958)
     -   VDF file for manual import: [`gyro_revolution_hl2_v1.0-beta.vdf`](gyro_revolution_hl2_v1.0-beta.vdf)
--   Changelog: TODO
+-   Changelog: **TODO**
 
 
-<a id="org588a592"></a>
+<a id="org1706d05"></a>
 
 # Installation, summarized
 
@@ -55,7 +55,7 @@ The Controls section will teach you how to use this control scheme.
 6.  Import my configuration
 
 
-<a id="org38845d3"></a>
+<a id="org5ac60cb"></a>
 
 # Installation, detailed
 
@@ -64,14 +64,14 @@ The Controls section will teach you how to use this control scheme.
         -   Right click game in Steam library > Manage > Browse local files  
             ![img](manage_browselocalfiles.png)
     2.  Extract the [Icon Pack zip](HL2_TouchMenuIcons.zip) there. You should now have a `TouchMenuIcons` directory.
-    3.  Enter the hl2/cfg/ directory and place the [gyro<sub>revolution.cfg</sub>](gyro_revolution.cfg) file there.
-    4.  Add `exec gyro_revolution` to your `autoexec.cfg` file
+    3.  Enter the hl2/cfg/ directory and place the [`gyro_revolution.cfg`](gyro_revolution.cfg) file there.
+    4.  (optional) make a backup of your `config.cfg` file should you want to restore it later.
+    5.  Add `exec gyro_revolution` to your `autoexec.cfg` file
         -   If you don't have an `autoexec.cfg` file, use this one: **TODO**
 2.  Connect your DualShock 4 to your computer. Either:
     -   Wired using a micro USB cable
-        -   Plug & Play
     -   Wireless using Bluetooth
-        -   With the DualShock 4 turned off, hold OPTIONS and the PS
+        -   With the DualShock 4 turned off, hold SHARE and the PS
             button to enter Bluetooth pairing mode, then pair it with the
             computer.
 3.  Enable DualShock 4 configuration support in Steam's Big Picture mode
@@ -90,66 +90,61 @@ The Controls section will teach you how to use this control scheme.
         ![img](bpm_startgyrocalibration.png)
     7.  Make sure the controller stays completely still until the calibration is done (about 5 seconds).
 4.  Import my configuration
-    -   Using the steam:// URL
-        1.  Copy this url: steam://controllerconfig/220/2073106958
-        2.  Right click game in Steam library > Manage > Controller Configuration ![img](manage_controllerconfig.png)
+    1.  [Click here](steam://controllerconfig/220/2073106958) to open the configuration in Steam. It should open this screen:  
+        ![img](bpm_configpreview.png)
+    2.  Press Square to apply, then Circle to exit
 5.  Play the game!
 
 
-<a id="orgaab7a07"></a>
+<a id="orgdae2cfc"></a>
 
 # Uninstallation
 
 1.  Remove the `exec gyro_revolution` line from your `autoexec.cfg` file
-2.  
+2.  Delete `config.cfg` and possibly restore a backup of it.
 
 
-<a id="org5667675"></a>
+<a id="org76e9e58"></a>
 
 # Control overview
 
 
-<a id="org9121d4c"></a>
+<a id="org705dd42"></a>
 
 ## Basics
 
-Use the **right stick** (RS) and the **gyroscope** (controller yaw/pitch
-movement, also referred to as **gyro**) to **move the camera.**
+Use the **right stick** and the **gyroscope** to **move the camera.**
 
-It's recommended to **rely on the gyro to aim precisely**, relegating
+It's recommended to rely on the gyro to aim precisely and to use
 the right stick for broader motions only, such as turning,
 recentering and coarse target acquisition.
 
-To readjust your controller stance without moving the camera, hold
-the right stick click (R3). This will temporarily disable the gyro
-input.
+The gyro is always-on by default, but you can temporarily toggle it
+off by clicking the right stick (**R3**). This is recommended when driving.
 
-To toggle gyro always-on, press the **SHARE** button. Gyro aiming
-will always be enabled when holding **L2** to aim.  
-Pressing **R3** will reenable gyro always-on, allowing you to quickly
-restore fine aiming in unexpected confrontations.
+Hold **L2** to aim more precisely. Gyro is always enabled when doing this.
 
-If the camera moves on its own, you need to **recalibrate the
-gyroscope.**  
-Setting the controller on a flat surface for a while may help, but
-running the calibration procedure in Steam Big Picture Mode's
-settings provides better, long-lasting results.
+If the camera moves on its own, you need to recalibrate the
+gyroscope as explained in the detailed installation instructions.
 
-Use the **left stick** (LS) to **move**.
-**Tap L3** (left stick click) to **sprint** until you release the stick.
+Use the **left stick** to **move**.  
+Click **L3** (left stick click) while moving to **sprint.** You will
+stop sprinting when you return the stick to its neutral position.
 
-**Tap X** to **jump.**
-**Circle** to **use.**
+**Tap X** to **jump.**  
+**Press Circle** to **use.**  
 **Tap Triangle** to **toggle crouch.**
 
-**Hold X** to **crouch after a jump**, which may help extend your reach
-and land tricky jumps. Note: the game itself automatically crouch
-jumps in some situations, usually next to boxes/windows/vents/etc.
+**Hold X** to **crouch while jumping**, which may help extend your
+reach, land tricky jumps or vault over obstacles.  
+Note: the game itself automatically crouch jumps in some
+situations, usually next to boxes/windows/vents/etc. This is only
+useful for more advanced moves.
 
 **Press OPTIONS** to **pause.**
 
 
-<a id="orge806edc"></a>
+<a id="orge2d9f33"></a>
 
 ### Summary
 
@@ -219,7 +214,7 @@ jumps in some situations, usually next to boxes/windows/vents/etc.
 </table>
 
 
-<a id="org1b1af4e"></a>
+<a id="orgf901976"></a>
 
 ## Weapons
 
@@ -245,7 +240,7 @@ You can also browse and select from available weapons the
 traditional way with **D-Pad LEFT/RIGHT** and **R2** to confirm.
 
 
-<a id="org0ef4ddc"></a>
+<a id="orgc909d98"></a>
 
 ### Summary
 
@@ -341,7 +336,7 @@ traditional way with **D-Pad LEFT/RIGHT** and **R2** to confirm.
 </table>
 
 
-<a id="orgcebf0a2"></a>
+<a id="orgf3cadba"></a>
 
 ## Utility
 
@@ -363,7 +358,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
 **Press R3** to quickly reenable always-on gyro aiming.
 
 
-<a id="org45302ba"></a>
+<a id="org66100f6"></a>
 
 ### Summary
 
@@ -422,7 +417,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
 </table>
 
 
-<a id="org0eb4e0b"></a>
+<a id="org56ac949"></a>
 
 # Feature List
 
@@ -461,7 +456,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
     generally over the top)
 
 
-<a id="orgd080e00"></a>
+<a id="orgc46b50e"></a>
 
 # Experimental features
 
@@ -476,7 +471,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
         -   No way to tutorialize an additional control scheme, so it's weird
 
 
-<a id="org9cca0a1"></a>
+<a id="orgaba5e6e"></a>
 
 # Bugs/Problems
 
@@ -492,7 +487,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
     adjacent slot and then into the desired slot always works
 
 
-<a id="org9d4db82"></a>
+<a id="orgd380f0f"></a>
 
 # Possible Improvements
 
