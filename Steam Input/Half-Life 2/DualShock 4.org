@@ -1,9 +1,8 @@
-#+TITLE: Major Gnuisance's Gyro Revolution for Half-Life 2
+#+TITLE: Gyro Revolution for Half-Life 2 by Major Gnuisance
 #+AUTHOR: Major Gnuisance
 #+EMAIL: majorgnuisance@gmail.com
-#+OPTIONS: html-style:nil
+#+OPTIONS: html-style:nil toc:2
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
-
 
 :init:
 #+BEGIN_SRC elisp :exports none
@@ -32,8 +31,11 @@
 #+END_SRC
 :END:
 
-
 * Introduction
+  :PROPERTIES:
+  :CUSTOM_ID: introduction
+  :END:
+  
   This page will help you set up and use a modern control scheme for
   Half-Life 2 with a DualShock 4 controller, via Steam Input.
 
@@ -41,6 +43,9 @@
   The Controls section will teach you how to use this control scheme.
 
 * Resource summary
+  :PROPERTIES:
+  :CUSTOM_ID: resources
+  :END:
   - Custom cfg file: [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]]
   - Icon pack: [[file:HL2_TouchMenuIcons.zip][=HL2_TouchMenuIcons.zip=]]
   - Controller Configuration
@@ -49,6 +54,9 @@
   - Changelog: *TODO*
 
 * Installation, summarized
+  :PROPERTIES:
+  :CUSTOM_ID: installation
+  :END:
   1. Extract icon pack into game's directory (=Half-Life 2=)
   2. Put =gyro_revolution.cfg= under the =hl2/cfg/= directory
   3. Add line with "=exec gyro_revolution=" to your =autoexec.cfg= file in the same directory (=hl2/cfg=). Create if necessary.
@@ -57,6 +65,9 @@
   6. Import my configuration
 
 * Installation, detailed
+  :PROPERTIES:
+  :CUSTOM_ID: installation_detailed
+  :END:
   1. Install icon pack and custom configuration file
      1. Open the game's directory
         - Right click game in Steam library > Manage > Browse local files\\
@@ -93,12 +104,23 @@
      2. Press Square to apply, then Circle to exit
   5. Play the game!
 
-* Uninstallation
+* Removal
+  :PROPERTIES:
+  :CUSTOM_ID: uninstall
+  :END:
   1. Remove the =exec gyro_revolution= line from your =autoexec.cfg= file
   2. Delete =config.cfg= and possibly restore a backup of it.
 
-* Control overview
+* Controls
+  :PROPERTIES:
+  :CUSTOM_ID: controls
+  :END:
+
 ** Basics
+   :PROPERTIES:
+   :CUSTOM_ID: basic_controls
+   :END:
+   
    Use the *right stick* and the *gyroscope* to *move the camera.*
 
    It's recommended to rely on the gyro to aim precisely and to use
@@ -129,20 +151,22 @@
 
    *Press OPTIONS* to *pause.*
 
-
-*** Summary
-    | Action               | Control                  |
-    |----------------------+--------------------------|
-    | Move                 | LS - Left Stick          |
-    | Move Camera          | Gyro - Controller Motion |
-    | Move Camera (coarse) | RS - Right Stick         |
-    | Sprint               | L3 - Left Stick Click    |
-    | Jump                 | X                        |
-    | Crouch-jump          | X (hold)                 |
-    | Toggle Crouch        | Triangle                 |
-    | Pause                | OPTIONS                  |
+   #+CAPTION: Summary
+   | Action               | Control                  |
+   |----------------------+--------------------------|
+   | Move                 | LS - Left Stick          |
+   | Move Camera          | Gyro - Controller Motion |
+   | Move Camera (coarse) | RS - Right Stick         |
+   | Sprint               | L3 - Left Stick Click    |
+   | Jump                 | X                        |
+   | Crouch-jump          | X (hold)                 |
+   | Toggle Crouch        | Triangle                 |
+   | Pause                | OPTIONS                  |
 
 ** Weapons
+   :PROPERTIES:
+   :CUSTOM_ID: weapons
+   :END:
    *Pull R2* for primary fire and *press R1* for secondary fire.
    *Press Square* to *reload*
 
@@ -163,25 +187,28 @@
    You can also browse and select from available weapons the
    traditional way with *D-Pad LEFT/RIGHT* and *R2* to confirm.
 
-*** Summary
-    | Action             | Control              |
-    |--------------------+----------------------|
-    | Fire               | R2                   |
-    | Secondary fire     | R1                   |
-    | Reload             | Square               |
-    |--------------------+----------------------|
-    | Weapon Wheel       | Hold L1 + RS         |
-    | Last Weapon        | Tap L1               |
-    | Previous/Next Slot | D-Pad LEFT/RIGHT     |
-    |--------------------+----------------------|
-    | Crowbar            | D-Pad UP             |
-    | Gravity Gun (swap) | D-Pad DOWN           |
-    | Grenade            | Hold D-Pad UP        |
-    | Pheropod           | Hold D-Pad DOWN      |
-    | RPG                | Touchpad, right edge |
-    | Squad              | Touchpad, left edge  |
+   #+CAPTION: Summary
+   | Action             | Control              |
+   |--------------------+----------------------|
+   | Fire               | R2                   |
+   | Secondary fire     | R1                   |
+   | Reload             | Square               |
+   |--------------------+----------------------|
+   | Weapon Wheel       | Hold L1 + RS         |
+   | Last Weapon        | Tap L1               |
+   | Previous/Next Slot | D-Pad LEFT/RIGHT     |
+   |--------------------+----------------------|
+   | Crowbar            | D-Pad UP             |
+   | Gravity Gun (swap) | D-Pad DOWN           |
+   | Grenade            | Hold D-Pad UP        |
+   | Pheropod           | Hold D-Pad DOWN      |
+   | RPG                | Touchpad, right edge |
+   | Squad              | Touchpad, left edge  |
 
 ** Utility
+   :PROPERTIES:
+   :CUSTOM_ID: utility
+   :END:
    Hold down *L2* (left trigger) to zoom in and reduce aiming
    sensitivity. Use it to aim with additional precision.
 
@@ -199,19 +226,22 @@
    Gyro aiming will still be available when holding the Aim button (L2).\\
    *Press R3* to quickly reenable always-on gyro aiming.
 
-*** Summary
-    | Action                | Control             |
-    |-----------------------+---------------------|
-    | Aim mode (ADS)        | L2                  |
-    | Flashlight Toggle     | Hold Triangle       |
-    | Quickload/save        | Hold touchpad icons |
-    |-----------------------+---------------------|
-    | Gyro Stop             | Hold R3             |
-    | Gyro always-on toggle | SHARE               |
-    | Enable Gyro always-on | Tap R3              |
+   #+CAPTION: Summary
+   | Action                | Control             |
+   |-----------------------+---------------------|
+   | Aim mode (ADS)        | L2                  |
+   | Flashlight Toggle     | Hold Triangle       |
+   | Quickload/save        | Hold touchpad icons |
+   |-----------------------+---------------------|
+   | Gyro Stop             | Hold R3             |
+   | Gyro always-on toggle | SHARE               |
+   | Enable Gyro always-on | Tap R3              |
 
 
 * Feature List
+  :PROPERTIES:
+  :CUSTOM_ID: features
+  :END:
   - Weapon Selection Wheel (L1 + RS)
     - Quickly select specific projectile weapons
     - Optional game slowdown when selecting weapon (requires enabling cheats)
@@ -246,42 +276,39 @@
   - Lowered rumble intensity (interferes with gyro aim and default is
     generally over the top)
 
-* Experimental features
-  - Vehicle controls (touchpad icon)
-    - Problems/limitations
-      - No way to trigger it automatically without native Steam Input
-        support
-      - No apparent way to have analog accelerator/brake on triggers
-        using Steam Input
-      - No apparent way to stop game from reading the raw right stick
-        for camera control, so aiming with it is always weird
-      - No way to tutorialize an additional control scheme, so it's weird
-
 * Bugs/Problems
+  :PROPERTIES:
+  :CUSTOM_ID: bugs
+  :END:
+  - Achievements are disabled due to enabling cheats
   - Potential weapon/mechanic spoilers from on-screen menus and documentation
     - Maybe remove some labels but keep icons?
-    - Especially Squad and Pheropod
-  - [Linux, maybe others] Game still uses right stick as a source or relative camera
-    input when driving vehicles, bypassing Steam Input
-    - Need to look into source code to figure out what's going on
-  - [Linux, maybe others] Weapon Wheel can be finicky and only
-    register inputs when "rolling" the stick, i.e. moving the stick
-    straight into a weapon slot is ignored but moving it into an
-    adjacent slot and then into the desired slot always works
+  - L3 doesn't uncrouch automatically.
+    - Need to find how directly go into uncrouched state after
+      a =toggle_duck=. =-duck= doesn't cut it.
 
 * Possible Improvements
+  :PROPERTIES:
+  :CUSTOM_ID: improvements
+  :END:
   - Enhance icon visibility in weapon wheel
-  - Blur the background when the weapon wheel is on.
+  - Blur the background or something when the weapon wheel slowdown is enabled.
     - =mat_hsv 1= makes it black and white and could be used for a
-      similar effect
-  - Full gyro off mode
+      similar effect, but feels like a bad hack
+  - Add animation to zoom and slow motion.
+    - Idea: make a dynamic re-aliasing-based binding that
+      increments/decrements stuff progressively upon repeated presses
+      and couple it with a turbo activator. Could be brittle, though.
+  - Full gyro off mode (if anyone asks for it)
   - Fine tune sensitivities and timings
   - Find way to hide spoilers until needed
     - No way to save state after changing to/from menu mode, though...
     - Proper Steam Input integration or gameside weapon wheel
-      implementation would be best, but require mod or update Valve
-      - Maybe Half-Life 2: Update would accept to have this?
-  - Some features require cheats
-    - FoV requires
-  - Proper zoom function currently not mapped at all
-    - Can't be used for ADS since it prevents firing weapons
+      implementation would be best, but it'd require a mod or an
+      update from Valve
+      - Maybe Half-Life 2: Update would accept to include such a
+        feature?
+  - Some features require cheats => find alternatives or make those
+    easily optional. An alternate no-cheat cfg file could be easy.
+  - Sounds aren't distorted when setting host_timescale for the
+    slowdown effect. See if there's any way to do this.

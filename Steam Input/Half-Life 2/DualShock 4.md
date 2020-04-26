@@ -1,26 +1,22 @@
 
 # Table of Contents
 
-1.  [Introduction](#orge823c69)
-2.  [Resource summary](#org1c09b9b)
-3.  [Installation, summarized](#org1706d05)
-4.  [Installation, detailed](#org5ac60cb)
-5.  [Uninstallation](#orgdae2cfc)
-6.  [Control overview](#org76e9e58)
-    1.  [Basics](#org705dd42)
-        1.  [Summary](#orge2d9f33)
-    2.  [Weapons](#orgf901976)
-        1.  [Summary](#orgc909d98)
-    3.  [Utility](#orgf3cadba)
-        1.  [Summary](#org66100f6)
-7.  [Feature List](#org56ac949)
-8.  [Experimental features](#orgc46b50e)
-9.  [Bugs/Problems](#orgaba5e6e)
-10. [Possible Improvements](#orgd380f0f)
+1.  [Introduction](#introduction)
+2.  [Resource summary](#resources)
+3.  [Installation, summarized](#installation)
+4.  [Installation, detailed](#installation_detailed)
+5.  [Removal](#uninstall)
+6.  [Controls](#controls)
+    1.  [Basics](#basic_controls)
+    2.  [Weapons](#weapons)
+    3.  [Utility](#utility)
+7.  [Feature List](#features)
+8.  [Bugs/Problems](#bugs)
+9.  [Possible Improvements](#improvements)
 
 
 
-<a id="orge823c69"></a>
+<a id="introduction"></a>
 
 # Introduction
 
@@ -31,7 +27,7 @@ The Installation section will show you how to set everything up.
 The Controls section will teach you how to use this control scheme.
 
 
-<a id="org1c09b9b"></a>
+<a id="resources"></a>
 
 # Resource summary
 
@@ -43,7 +39,7 @@ The Controls section will teach you how to use this control scheme.
 -   Changelog: **TODO**
 
 
-<a id="org1706d05"></a>
+<a id="installation"></a>
 
 # Installation, summarized
 
@@ -55,7 +51,7 @@ The Controls section will teach you how to use this control scheme.
 6.  Import my configuration
 
 
-<a id="org5ac60cb"></a>
+<a id="installation_detailed"></a>
 
 # Installation, detailed
 
@@ -96,20 +92,20 @@ The Controls section will teach you how to use this control scheme.
 5.  Play the game!
 
 
-<a id="orgdae2cfc"></a>
+<a id="uninstall"></a>
 
-# Uninstallation
+# Removal
 
 1.  Remove the `exec gyro_revolution` line from your `autoexec.cfg` file
 2.  Delete `config.cfg` and possibly restore a backup of it.
 
 
-<a id="org76e9e58"></a>
+<a id="controls"></a>
 
-# Control overview
+# Controls
 
 
-<a id="org705dd42"></a>
+<a id="basic_controls"></a>
 
 ## Basics
 
@@ -143,13 +139,8 @@ useful for more advanced moves.
 
 **Press OPTIONS** to **pause.**
 
-
-<a id="orge2d9f33"></a>
-
-### Summary
-
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
+<caption class="t-above"><span class="table-number">Table 1:</span> Summary</caption>
 
 <colgroup>
 <col  class="org-left" />
@@ -214,7 +205,7 @@ useful for more advanced moves.
 </table>
 
 
-<a id="orgf901976"></a>
+<a id="weapons"></a>
 
 ## Weapons
 
@@ -239,13 +230,8 @@ The **Weapon Select Wheel** is restricted to projectile weapons.
 You can also browse and select from available weapons the
 traditional way with **D-Pad LEFT/RIGHT** and **R2** to confirm.
 
-
-<a id="orgc909d98"></a>
-
-### Summary
-
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
+<caption class="t-above"><span class="table-number">Table 2:</span> Summary</caption>
 
 <colgroup>
 <col  class="org-left" />
@@ -336,7 +322,7 @@ traditional way with **D-Pad LEFT/RIGHT** and **R2** to confirm.
 </table>
 
 
-<a id="orgf3cadba"></a>
+<a id="utility"></a>
 
 ## Utility
 
@@ -357,13 +343,8 @@ reposition the controller without whipping the camera around.
 Gyro aiming will still be available when holding the Aim button (L2).  
 **Press R3** to quickly reenable always-on gyro aiming.
 
-
-<a id="org66100f6"></a>
-
-### Summary
-
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
+<caption class="t-above"><span class="table-number">Table 3:</span> Summary</caption>
 
 <colgroup>
 <col  class="org-left" />
@@ -417,7 +398,7 @@ Gyro aiming will still be available when holding the Aim button (L2).
 </table>
 
 
-<a id="org56ac949"></a>
+<a id="features"></a>
 
 # Feature List
 
@@ -456,54 +437,41 @@ Gyro aiming will still be available when holding the Aim button (L2).
     generally over the top)
 
 
-<a id="orgc46b50e"></a>
-
-# Experimental features
-
--   Vehicle controls (touchpad icon)
-    -   Problems/limitations
-        -   No way to trigger it automatically without native Steam Input
-            support
-        -   No apparent way to have analog accelerator/brake on triggers
-            using Steam Input
-        -   No apparent way to stop game from reading the raw right stick
-            for camera control, so aiming with it is always weird
-        -   No way to tutorialize an additional control scheme, so it's weird
-
-
-<a id="orgaba5e6e"></a>
+<a id="bugs"></a>
 
 # Bugs/Problems
 
+-   Achievements are disabled due to enabling cheats
 -   Potential weapon/mechanic spoilers from on-screen menus and documentation
     -   Maybe remove some labels but keep icons?
-    -   Especially Squad and Pheropod
--   [Linux, maybe others] Game still uses right stick as a source or relative camera
-    input when driving vehicles, bypassing Steam Input
-    -   Need to look into source code to figure out what's going on
--   [Linux, maybe others] Weapon Wheel can be finicky and only
-    register inputs when "rolling" the stick, i.e. moving the stick
-    straight into a weapon slot is ignored but moving it into an
-    adjacent slot and then into the desired slot always works
+-   L3 doesn't uncrouch automatically.
+    -   Need to find how directly go into uncrouched state after
+        a `toggle_duck`. `-duck` doesn't cut it.
 
 
-<a id="orgd380f0f"></a>
+<a id="improvements"></a>
 
 # Possible Improvements
 
 -   Enhance icon visibility in weapon wheel
--   Blur the background when the weapon wheel is on.
+-   Blur the background or something when the weapon wheel slowdown is enabled.
     -   `mat_hsv 1` makes it black and white and could be used for a
-        similar effect
--   Full gyro off mode
+        similar effect, but feels like a bad hack
+-   Add animation to zoom and slow motion.
+    -   Idea: make a dynamic re-aliasing-based binding that
+        increments/decrements stuff progressively upon repeated presses
+        and couple it with a turbo activator. Could be brittle, though.
+-   Full gyro off mode (if anyone asks for it)
 -   Fine tune sensitivities and timings
 -   Find way to hide spoilers until needed
     -   No way to save state after changing to/from menu mode, though&#x2026;
     -   Proper Steam Input integration or gameside weapon wheel
-        implementation would be best, but require mod or update Valve
-        -   Maybe Half-Life 2: Update would accept to have this?
--   Some features require cheats
-    -   FoV requires
--   Proper zoom function currently not mapped at all
-    -   Can't be used for ADS since it prevents firing weapons
+        implementation would be best, but it'd require a mod or an
+        update from Valve
+        -   Maybe Half-Life 2: Update would accept to include such a
+            feature?
+-   Some features require cheats => find alternatives or make those
+    easily optional. An alternate no-cheat cfg file could be easy.
+-   Sounds aren't distorted when setting host<sub>timescale</sub> for the
+    slowdown effect. See if there's any way to do this.
 
