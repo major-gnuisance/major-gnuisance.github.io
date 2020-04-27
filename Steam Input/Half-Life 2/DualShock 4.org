@@ -247,8 +247,8 @@
    | Aim mode          | {{{btnbig(l2)}}}            |
    | Gyro Toggle       | Click {{{btnbig(rs)}}}      |
    | Flashlight Toggle | Hold {{{btnbig(triangle)}}} |
-   | Quickload/save    | {{{btn(touchpad)}}}         |
-   | Squad send/recall | {{{btn(touchpad)}}}         |
+   | Quickload/save    | {{{btnbig(touchpad)}}}      |
+   | Squad send/recall | {{{btnbig(touchpad)}}}      |
 
 ** Menu mode
    :PROPERTIES:
@@ -270,15 +270,12 @@
   :PROPERTIES:
   :CUSTOM_ID: features
   :END:
-  (TODO: update this section)
   - Weapon Selection Wheel ({{{btn(l1)}}} + {{{btn(rs)}}})
     - Quickly select specific weapons
     - Game slows down when the weapon wheel is held open
     - Toggle to last weapon by tapping weapon wheel button
-  - Quick access to special weapons with {{{btn(dpadl)}}} {{{btn(dpadr)}}}
-  - (pseudo) Aim Down Sights button {{{btn(l2)}}}
+  - Aim button {{{btn(l2)}}}
     - Zooms in and lowers sensitivity for finer aiming
-    - Doesn't really aim down sights. Get an actual mod for that!
   - Modern sprint button {{{btn(ls)}}} (click)
     - Click once while moving to start sprinting, return stick to center
       position to stop sprinting.
@@ -287,19 +284,20 @@
   - Gyroscope aim
     - Always on by default
     - Can be toggled by clicking {{{btn(rs)}}}
-    - Still available when holding aim button ({{{btn(l2)}}})
-  - Quickload and Quicksave with safety (hold to trigger) on {{{btn(trackpad)}}}
+    - Always available when holding aim button ({{{btn(l2)}}})
+  - Quickload and Quicksave on {{{btn(trackpad)}}}
   - Menu interaction mode
     - Triggers automatically when the mouse pointer is displayed,
       returns to game mode when the mouse is hidden
     - {{{btn(touchpad)}}} and {{{btn(rs)}}} can be used to move the mouse,
       {{{btn(rs)}}} click and {{{btn(touchpad)}}} click for Left Mouse
       Button
-  - Squad Command and Pheropods on left edge of trackpad
+  - Squad Command and Pheropods on {{{btn(touchpad)}}}
   - Custom Steam Input Icons for Half-Life 2's Weapons
-    - Derived from game assets
-  - Lowered rumble intensity (interferes with gyro aim and default is
-    generally over the top)
+    - Derived from touched up game assets
+  - Lowered rumble intensity
+    - Excessive rumble may interfere with gyro aim the and default is
+      way over the top
 
 * Bugs/Problems
   :PROPERTIES:
@@ -348,3 +346,4 @@
 
   - The awesome guys at [[https://thoseawesomeguys.com/][THOSE AWESOME GUYS]] for their [[https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack][free controller
     glyph pack]]
+  - The [[https://www.reddit.com/r/SteamController/][r/SteamController]] community

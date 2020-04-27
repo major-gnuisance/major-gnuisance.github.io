@@ -388,13 +388,13 @@ load your game.)
 
 <tr>
 <td class="org-left">Quickload/save</td>
-<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/></td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
 
 
 <tr>
 <td class="org-left">Squad send/recall</td>
-<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/></td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
 </tbody>
 </table>
@@ -449,16 +449,12 @@ In this mode, the following controls are available:
 
 # Feature List
 
-(TODO: update this section)
-
 -   Weapon Selection Wheel (<img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> + <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>)
     -   Quickly select specific weapons
     -   Game slows down when the weapon wheel is held open
     -   Toggle to last weapon by tapping weapon wheel button
--   Quick access to special weapons with <img src="glyphs/ps4/dpadl.png" alt="glyph for dpadl" style="vertical-align: middle; max-height: 4ex"/> <img src="glyphs/ps4/dpadr.png" alt="glyph for dpadr" style="vertical-align: middle; max-height: 4ex"/>
--   (pseudo) Aim Down Sights button <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>
+-   Aim button <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>
     -   Zooms in and lowers sensitivity for finer aiming
-    -   Doesn't really aim down sights. Get an actual mod for that!
 -   Modern sprint button <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> (click)
     -   Click once while moving to start sprinting, return stick to center
         position to stop sprinting.
@@ -467,19 +463,20 @@ In this mode, the following controls are available:
 -   Gyroscope aim
     -   Always on by default
     -   Can be toggled by clicking <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>
-    -   Still available when holding aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>)
--   Quickload and Quicksave with safety (hold to trigger) on <img src="glyphs/ps4/trackpad.png" alt="glyph for trackpad" style="vertical-align: middle; max-height: 4ex"/>
+    -   Always available when holding aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>)
+-   Quickload and Quicksave on <img src="glyphs/ps4/trackpad.png" alt="glyph for trackpad" style="vertical-align: middle; max-height: 4ex"/>
 -   Menu interaction mode
     -   Triggers automatically when the mouse pointer is displayed,
         returns to game mode when the mouse is hidden
     -   <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/> and <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> can be used to move the mouse,
         <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> click and <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/> click for Left Mouse
         Button
--   Squad Command and Pheropods on left edge of trackpad
+-   Squad Command and Pheropods on <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/>
 -   Custom Steam Input Icons for Half-Life 2's Weapons
-    -   Derived from game assets
--   Lowered rumble intensity (interferes with gyro aim and default is
-    generally over the top)
+    -   Derived from touched up game assets
+-   Lowered rumble intensity
+    -   Excessive rumble may interfere with gyro aim the and default is
+        way over the top
 
 
 <a id="bugs"></a>
@@ -530,4 +527,5 @@ In this mode, the following controls are available:
 
 -   The awesome guys at [THOSE AWESOME GUYS](https://thoseawesomeguys.com/) for their [free controller
     glyph pack](https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack)
+-   The [r/SteamController](https://www.reddit.com/r/SteamController/) community
 
