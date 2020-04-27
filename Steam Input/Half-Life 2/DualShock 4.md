@@ -1,5 +1,6 @@
 
-# Gyro Revolution for Half-Life 2 by Major Gnuisance
+# Gyro Revolution for Half-Life 2
+by Major Gnuisance
 ## Table of Contents
 1.  [Introduction](#introduction)
 2.  [Resource summary](#resources)
@@ -10,6 +11,7 @@
     1.  [Basics](#basic_controls)
     2.  [Weapons](#weapons)
     3.  [Utility](#utility)
+    4.  [Menu mode](#menumode)
 7.  [Feature List](#features)
 8.  [Bugs/Problems](#bugs)
 9.  [Possible Improvements](#improvements)
@@ -65,7 +67,7 @@ how this control scheme works exactly.
         -   Right click game in Steam library > Manage > Browse local files  
             ![img](manage_browselocalfiles.png)
     2.  Extract the [Icon Pack zip](HL2_TouchMenuIcons.zip) there. You should now have a `TouchMenuIcons` directory.
-    3.  Enter the hl2/cfg/ directory and place the [gyro_revolution.cfg](gyro_revolution.cfg) file there.
+    3.  Enter the hl2/cfg/ directory and place the [gyro\_revolution.cfg](gyro_revolution.cfg) file there.
     4.  (optional) make a backup of your `config.cfg` file should you want to restore it later.
     5.  Add `exec gyro_revolution` to your `autoexec.cfg` file
         -   If you don't have an `autoexec.cfg` file, use this one: [autoexec.cfg](autoexec.cfg)
@@ -132,18 +134,19 @@ gyro drift.*
 installation instructions if this happens.*
 
 Use <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> to **move**.  
-Click <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> while moving to **sprint.** You will
-stop sprinting when you return the stick to its neutral position.
+Click <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> while moving to **sprint.**  
+*You will stop sprinting when you return the stick to its neutral
+position.*
 
 **Tap** <img src="glyphs/ps4/cross.png" alt="glyph for cross" style="vertical-align: middle; max-height: 4ex"/> to **jump.**  
-**Tap** <img src="glyphs/ps4/triangle.png" alt="glyph for triangle" style="vertical-align: middle; max-height: 4ex"/> to **toggle crouch.**
+**Tap** <img src="glyphs/ps4/triangle.png" alt="glyph for triangle" style="vertical-align: middle; max-height: 4ex"/> to **toggle crouch.**  
 **Press** <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to **use.**  
 
 **Hold** <img src="glyphs/ps4/cross.png" alt="glyph for cross" style="vertical-align: middle; max-height: 4ex"/> to **crouch while jumping**, which may help extend your
 reach, land tricky jumps or vault over obstacles.  
-Note: the game itself automatically crouch jumps in some
-situations, usually next to boxes/windows/vents/etc. This is only
-useful for more advanced moves.
+*Note: the game itself automatically crouch jumps in some
+situations, usually next to boxes/windows/vents/etc.* *This is only
+useful for more advanced moves.*
 
 **Press** <img src="glyphs/ps4/options.png" alt="glyph for options" style="vertical-align: middle; max-height: 4ex"/> to **pause.**
 
@@ -212,6 +215,12 @@ useful for more advanced moves.
 
 
 <tr>
+<td class="org-left">Use</td>
+<td class="org-left"><img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 6ex"/></td>
+</tr>
+
+
+<tr>
 <td class="org-left">Pause</td>
 <td class="org-left"><img src="glyphs/ps4/options.png" alt="glyph for options" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
@@ -223,7 +232,7 @@ useful for more advanced moves.
 
 ## Weapons
 
-**Pull** <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/> for primary fire and **press** <img src="glyphs/ps4/r1.png" alt="glyph for r1" style="vertical-align: middle; max-height: 4ex"/> for secondary fire.
+**Pull** <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/> for primary fire and **press** <img src="glyphs/ps4/r1.png" alt="glyph for r1" style="vertical-align: middle; max-height: 4ex"/> for secondary fire.  
 **Tap** <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to **reload**
 
 **Tap** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to swap to your previously selected weapon.  
@@ -381,6 +390,57 @@ load your game.)
 <td class="org-left">Quickload/save</td>
 <td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/></td>
 </tr>
+
+
+<tr>
+<td class="org-left">Squad send/recall</td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/></td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="menumode"></a>
+
+## Menu mode
+
+When the mouse cursor is shown, the configuration enters a special
+mode for menu interaction.
+
+In this mode, the following controls are available:
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Action</th>
+<th scope="col" class="org-left">Control</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">Mouse</td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 6ex"/> or <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 6ex"/></td>
+</tr>
+
+
+<tr>
+<td class="org-left">Click</td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 6ex"/> click, <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 6ex"/> click or <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 6ex"/></td>
+</tr>
+
+
+<tr>
+<td class="org-left">Volume Up/Down</td>
+<td class="org-left"><img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 6ex"/> up/down</td>
+</tr>
 </tbody>
 </table>
 
@@ -392,28 +452,23 @@ load your game.)
 (TODO: update this section)
 
 -   Weapon Selection Wheel (<img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> + <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>)
-    -   Quickly select specific projectile weapons
-    -   Optional game slowdown when selecting weapon (requires enabling cheats)
+    -   Quickly select specific weapons
+    -   Game slows down when the weapon wheel is held open
     -   Toggle to last weapon by tapping weapon wheel button
--   Quick access to special weapons with D-Pad UP/DOWN
--   (pseudo) Aim Down Sights button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>)
+-   Quick access to special weapons with <img src="glyphs/ps4/dpadl.png" alt="glyph for dpadl" style="vertical-align: middle; max-height: 4ex"/> <img src="glyphs/ps4/dpadr.png" alt="glyph for dpadr" style="vertical-align: middle; max-height: 4ex"/>
+-   (pseudo) Aim Down Sights button <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>
     -   Zooms in and lowers sensitivity for finer aiming
-    -   Higher magnification requires enabling cheats
-    -   Doesn't really aim down sights. Get an actual mod for that
--   Modern sprint button (<img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/>)
+    -   Doesn't really aim down sights. Get an actual mod for that!
+-   Modern sprint button <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> (click)
     -   Click once while moving to start sprinting, return stick to center
         position to stop sprinting.
--   Direct quick access to Crowbar and Gravity Gun (<img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/> / <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>)
+-   Direct quick access to Crowbar and Gravity Gun <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/> / <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>
 -   Sequential weapon select (<img src="glyphs/ps4/dpadl.png" alt="glyph for dpadl" style="vertical-align: middle; max-height: 4ex"/> / <img src="glyphs/ps4/dpadr.png" alt="glyph for dpadr" style="vertical-align: middle; max-height: 4ex"/>)
 -   Gyroscope aim
     -   Always on by default
-    -   Can be temporarily stopped by holding <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>
-        -   e.g. hold <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> while readjusting your pose to avoid swinging the
-            camera around
-    -   Gyro can be turned on/off with OPTIONS button
-        -   Still when holding ADS button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>)
-        -   Can be enabled again on a moment's notice by tapping <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>
--   Quickload and Quicksave with safety (hold to trigger) on trackpad
+    -   Can be toggled by clicking <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>
+    -   Still available when holding aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>)
+-   Quickload and Quicksave with safety (hold to trigger) on <img src="glyphs/ps4/trackpad.png" alt="glyph for trackpad" style="vertical-align: middle; max-height: 4ex"/>
 -   Menu interaction mode
     -   Triggers automatically when the mouse pointer is displayed,
         returns to game mode when the mouse is hidden

@@ -148,18 +148,19 @@
    installation instructions if this happens./
 
    Use {{{btn(ls)}}} to *move*.\\
-   Click {{{btn(ls)}}} while moving to *sprint.* You will
-   stop sprinting when you return the stick to its neutral position.
+   Click {{{btn(ls)}}} while moving to *sprint.*\\
+   /You will stop sprinting when you return the stick to its neutral
+   position./
 
    *Tap* {{{btn(cross)}}} to *jump.*\\
-   *Tap* {{{btn(triangle)}}} to *toggle crouch.*
+   *Tap* {{{btn(triangle)}}} to *toggle crouch.*\\
    *Press* {{{btn(circle)}}} to *use.*\\
 
    *Hold* {{{btn(cross)}}} to *crouch while jumping*, which may help extend your
    reach, land tricky jumps or vault over obstacles.\\
-   Note: the game itself automatically crouch jumps in some
-   situations, usually next to boxes/windows/vents/etc. This is only
-   useful for more advanced moves.
+   /Note: the game itself automatically crouch jumps in some
+   situations, usually next to boxes/windows/vents/etc./ /This is only
+   useful for more advanced moves./
 
    *Press* {{{btn(options)}}} to *pause.*
 
@@ -174,13 +175,14 @@
    | Jump                 | {{{btnbig(cross)}}}        |
    | Crouch-jump          | {{{btnbig(cross)}}} (hold) |
    | Toggle Crouch        | {{{btnbig(triangle)}}}     |
+   | Use                  | {{{btnbig(circle)}}}       |
    | Pause                | {{{btnbig(options)}}}      |
 
 ** Weapons
    :PROPERTIES:
    :CUSTOM_ID: weapons
    :END:
-   *Pull* {{{btn(r2)}}} for primary fire and *press* {{{btn(r1)}}} for secondary fire.
+   *Pull* {{{btn(r2)}}} for primary fire and *press* {{{btn(r1)}}} for secondary fire.\\
    *Tap* {{{btn(square)}}} to *reload*
 
    *Tap* {{{btn(l1)}}} to swap to your previously selected weapon.\\
@@ -246,8 +248,23 @@
    | Gyro Toggle       | Click {{{btnbig(rs)}}}      |
    | Flashlight Toggle | Hold {{{btnbig(triangle)}}} |
    | Quickload/save    | {{{btn(touchpad)}}}         |
+   | Squad send/recall | {{{btn(touchpad)}}}         |
 
+** Menu mode
+   :PROPERTIES:
+   :CUSTOM_ID: menumode
+   :END:
 
+   When the mouse cursor is shown, the configuration enters a special
+   mode for menu interaction.
+
+   In this mode, the following controls are available:
+
+   | Action         | Control                                                                  |
+   |----------------+--------------------------------------------------------------------------|
+   | Mouse          | {{{btnbig(touchpad)}}} or {{{btnbig(rs)}}}                               |
+   | Click          | {{{btnbig(touchpad)}}} click, {{{btnbig(rs)}}} click or {{{btnbig(r2)}}} |
+   | Volume Up/Down | {{{btnbig(ls)}}} up/down                                                 |
 
 * Feature List
   :PROPERTIES:
@@ -255,28 +272,23 @@
   :END:
   (TODO: update this section)
   - Weapon Selection Wheel ({{{btn(l1)}}} + {{{btn(rs)}}})
-    - Quickly select specific projectile weapons
-    - Optional game slowdown when selecting weapon (requires enabling cheats)
+    - Quickly select specific weapons
+    - Game slows down when the weapon wheel is held open
     - Toggle to last weapon by tapping weapon wheel button
-  - Quick access to special weapons with D-Pad UP/DOWN
-  - (pseudo) Aim Down Sights button ({{{btn(l2)}}})
+  - Quick access to special weapons with {{{btn(dpadl)}}} {{{btn(dpadr)}}}
+  - (pseudo) Aim Down Sights button {{{btn(l2)}}}
     - Zooms in and lowers sensitivity for finer aiming
-    - Higher magnification requires enabling cheats
-    - Doesn't really aim down sights. Get an actual mod for that
-  - Modern sprint button ({{{btn(ls)}}})
+    - Doesn't really aim down sights. Get an actual mod for that!
+  - Modern sprint button {{{btn(ls)}}} (click)
     - Click once while moving to start sprinting, return stick to center
       position to stop sprinting.
-  - Direct quick access to Crowbar and Gravity Gun ({{{btn(dpadu)}}} / {{{btn(dpadd)}}})
+  - Direct quick access to Crowbar and Gravity Gun {{{btn(dpadu)}}} / {{{btn(dpadd)}}}
   - Sequential weapon select ({{{btn(dpadl)}}} / {{{btn(dpadr)}}})
   - Gyroscope aim
     - Always on by default
-    - Can be temporarily stopped by holding {{{btn(rs)}}}
-      - e.g. hold {{{btn(rs)}}} while readjusting your pose to avoid swinging the
-        camera around
-    - Gyro can be turned on/off with OPTIONS button
-      - Still when holding ADS button ({{{btn(l2)}}})
-      - Can be enabled again on a moment's notice by tapping {{{btn(rs)}}}
-  - Quickload and Quicksave with safety (hold to trigger) on trackpad
+    - Can be toggled by clicking {{{btn(rs)}}}
+    - Still available when holding aim button ({{{btn(l2)}}})
+  - Quickload and Quicksave with safety (hold to trigger) on {{{btn(trackpad)}}}
   - Menu interaction mode
     - Triggers automatically when the mouse pointer is displayed,
       returns to game mode when the mouse is hidden
