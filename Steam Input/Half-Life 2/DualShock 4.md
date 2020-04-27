@@ -1,6 +1,6 @@
 
-# Table of Contents
-
+# Gyro Revolution for Half-Life 2 by Major Gnuisance
+## Table of Contents
 1.  [Introduction](#introduction)
 2.  [Resource summary](#resources)
 3.  [Installation, summarized](#installation)
@@ -21,23 +21,27 @@
 
 # Introduction
 
-This page will help you set up and use a modern control scheme for
-Half-Life 2 with a DualShock 4 controller, via Steam Input.
+This page will help you set up and use my Steam Input configuration
+to play Half-Life 2 with a DualShock 4 controller.
 
-The Installation section will show you how to set everything up.
-The Controls section will teach you how to use this control scheme.
+Here's some footage of what playing with this looks like:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qoeJINASIuM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+Follow either the summarized or detailed Installation section to set
+everything up, then check out the Controls section details to see
+how this control scheme works exactly.
 
 
 <a id="resources"></a>
 
 # Resource summary
 
--   Custom cfg file: [`gyro_revolution.cfg`](gyro_revolution.cfg)
--   Icon pack: [`HL2_TouchMenuIcons.zip`](HL2_TouchMenuIcons.zip)
+-   Custom cfg file: [gyro\_revolution.cfg](gyro_revolution.cfg)
+-   Icon pack: [HL2\_TouchMenuIcons.zip](HL2_TouchMenuIcons.zip)
 -   Controller Configuration
-    -   v1.0-beta URL: [`steam://controllerconfig/220/2073106958`](steam://controllerconfig/220/2073106958)
-    -   VDF file for manual import: [`gyro_revolution_hl2_v1.0-beta.vdf`](gyro_revolution_hl2_v1.0-beta.vdf)
--   Changelog: **TODO**
+    -   v1.0-beta URL: [steam://controllerconfig/220/2073106958](steam://controllerconfig/220/2073106958)
+    -   VDF file for manual import: [gyro\_revolution\_hl2\_v1.0-beta.vdf](gyro_revolution_hl2_v1.0-beta.vdf)
 
 
 <a id="installation"></a>
@@ -61,10 +65,10 @@ The Controls section will teach you how to use this control scheme.
         -   Right click game in Steam library > Manage > Browse local files  
             ![img](manage_browselocalfiles.png)
     2.  Extract the [Icon Pack zip](HL2_TouchMenuIcons.zip) there. You should now have a `TouchMenuIcons` directory.
-    3.  Enter the hl2/cfg/ directory and place the [`gyro_revolution.cfg`](gyro_revolution.cfg) file there.
+    3.  Enter the hl2/cfg/ directory and place the [gyro_revolution.cfg](gyro_revolution.cfg) file there.
     4.  (optional) make a backup of your `config.cfg` file should you want to restore it later.
     5.  Add `exec gyro_revolution` to your `autoexec.cfg` file
-        -   If you don't have an `autoexec.cfg` file, use this one: **TODO**
+        -   If you don't have an `autoexec.cfg` file, use this one: [autoexec.cfg](autoexec.cfg)
 2.  Connect your DualShock 4 to your computer. Either:
     -   Wired using a micro USB cable
     -   Wireless using Bluetooth
@@ -110,28 +114,30 @@ The Controls section will teach you how to use this control scheme.
 
 ## Basics
 
-Use the **right stick** and the **gyroscope** to **move the camera.**
+Use <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> and the **gyroscope** to **move the camera.**
 
-It's recommended to rely on the gyro to aim precisely and to use
-the right stick for broader motions only, such as turning,
-recentering and coarse target acquisition.
+It's recommended to rely on the gyro to aim and <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> for
+broader motions.
 
-The gyro is always-on by default, but you can temporarily toggle it
-off by clicking <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>. This is recommended when driving.
+The gyro is always on by default, but you can toggle it on and off
+by clicking <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>. It's recommended to turn it off when
+driving outside of combat.
 
-**Hold** <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/> to aim more precisely. Gyro is always enabled when doing this.
+**Hold** <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/> to aim more precisely.  
+Gyro is always enabled when doing this.
 
-**Note:** If the camera moves on its own you might be experiencing
-*gyro drift.* Try recalibrating the gyroscope as explained in the
-detailed installation instructions.
+*Note: If the camera moves on its own you might be experiencing
+gyro drift.*  
+*Try recalibrating the gyroscope as explained in the detailed
+installation instructions if this happens.*
 
 Use <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> to **move**.  
 Click <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> while moving to **sprint.** You will
 stop sprinting when you return the stick to its neutral position.
 
 **Tap** <img src="glyphs/ps4/cross.png" alt="glyph for cross" style="vertical-align: middle; max-height: 4ex"/> to **jump.**  
-**Press** <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to **use.**  
 **Tap** <img src="glyphs/ps4/triangle.png" alt="glyph for triangle" style="vertical-align: middle; max-height: 4ex"/> to **toggle crouch.**
+**Press** <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to **use.**  
 
 **Hold** <img src="glyphs/ps4/cross.png" alt="glyph for cross" style="vertical-align: middle; max-height: 4ex"/> to **crouch while jumping**, which may help extend your
 reach, land tricky jumps or vault over obstacles.  
@@ -164,6 +170,12 @@ useful for more advanced moves.
 
 
 <tr>
+<td class="org-left">Sprint</td>
+<td class="org-left"><img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 6ex"/> click</td>
+</tr>
+
+
+<tr>
 <td class="org-left">Move Camera</td>
 <td class="org-left">Gyro</td>
 </tr>
@@ -176,8 +188,8 @@ useful for more advanced moves.
 
 
 <tr>
-<td class="org-left">Sprint</td>
-<td class="org-left"><img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 6ex"/> click</td>
+<td class="org-left">Toggle gyro</td>
+<td class="org-left"><img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 6ex"/> click</td>
 </tr>
 
 
@@ -212,24 +224,25 @@ useful for more advanced moves.
 ## Weapons
 
 **Pull** <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/> for primary fire and **press** <img src="glyphs/ps4/r1.png" alt="glyph for r1" style="vertical-align: middle; max-height: 4ex"/> for secondary fire.
-**Press** <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to **reload**
+**Tap** <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to **reload**
 
 **Tap** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to swap to your previously selected weapon.  
-**Hold** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to bring up the **Weapon Select Wheel** and select a weapon
+**Hold** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to bring up the **Weapon Select Wheel** and then select a weapon
 with <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>.
 
-The **Weapon Select Wheel** is restricted to projectile weapons.
+Due to usability constraints, not all weapons are in the selection
+wheel, but they have their own dedicated quick access buttons.
 
-**Other Weapons** are placed differently:
+The following weapons have quick access buttons:
 
 -   **Crowbar** on <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/>
--   **Grenades** on **Hold** <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/>
+-   **Grenades** on **Hold** <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/> and **Hold** <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/>
 -   **Gravity Gun** on <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>
--   **Pheropods** on **Hold** <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>
--   **Squad Commands** on the **right edge of the touchpad**
+-   **Pheropods** on **Hold** <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/> or icon in <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/>.
 
 You can also browse and select from available weapons the
-traditional way with **D-Pad LEFT/RIGHT** and **<img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/>** to confirm.
+traditional way with <img src="glyphs/ps4/dpadl.png" alt="glyph for dpadl" style="vertical-align: middle; max-height: 4ex"/> and <img src="glyphs/ps4/dpadr.png" alt="glyph for dpadr" style="vertical-align: middle; max-height: 4ex"/>. Press
+<img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/> to confirm your selection.
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Summary</caption>
@@ -299,19 +312,13 @@ traditional way with **D-Pad LEFT/RIGHT** and **<img src="glyphs/ps4/r2.png" alt
 
 <tr>
 <td class="org-left">Grenade</td>
-<td class="org-left"><img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 6ex"/></td>
+<td class="org-left"><img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 6ex"/> (hold), <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 6ex"/> (hold)</td>
 </tr>
 
 
 <tr>
 <td class="org-left">Pheropods</td>
-<td class="org-left"><img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 6ex"/></td>
-</tr>
-
-
-<tr>
-<td class="org-left">Squad</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left"><img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 6ex"/> (hold), <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
 </tbody>
 </table>
@@ -321,20 +328,20 @@ traditional way with **D-Pad LEFT/RIGHT** and **<img src="glyphs/ps4/r2.png" alt
 
 ## Utility
 
-Hold down <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/> to zoom in and reduce aiming
-sensitivity. Use it to aim with additional precision.
+Hold <img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/> to zoom in and reduce aiming sensitivity.  
+Use it to aim with additional precision if necessary.  
+This temporarily enables the gyroscope if it's toggled off.
 
 **Hold** <img src="glyphs/ps4/triangle.png" alt="glyph for triangle" style="vertical-align: middle; max-height: 4ex"/> to **toggle the flashlight**.
 
-**Click and hold** the corresponding touchpad icons to **Quicksave** or
-**Quickload**.   
-The requirement to hold is so that you don't accidentally save or
-\*load your game.
-
 **Click** <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> to toggle the gyroscope.
 
-**Press** <img src="glyphs/ps4/share.png" alt="glyph for share" style="vertical-align: middle; max-height: 4ex"/> to toggle always-on gyro aiming.  
-Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>).  
+**Squad Commands** can be found on the **right edge** of <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/>
+
+**Click and hold** the corresponding <img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/> icons to
+**Quicksave** or **Quickload**.   
+(The requirement to hold is so that you don't accidentally save or
+load your game.)
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> Summary</caption>
@@ -353,7 +360,7 @@ Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps
 
 <tbody>
 <tr>
-<td class="org-left">Aim mode (ADS)</td>
+<td class="org-left">Aim mode</td>
 <td class="org-left"><img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
 
@@ -372,7 +379,7 @@ Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps
 
 <tr>
 <td class="org-left">Quickload/save</td>
-<td class="org-left">Hold touchpad icons</td>
+<td class="org-left"><img src="glyphs/ps4/touchpad.png" alt="glyph for touchpad" style="vertical-align: middle; max-height: 4ex"/></td>
 </tr>
 </tbody>
 </table>
@@ -381,6 +388,8 @@ Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps
 <a id="features"></a>
 
 # Feature List
+
+(TODO: update this section)
 
 -   Weapon Selection Wheel (<img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> + <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/>)
     -   Quickly select specific projectile weapons
@@ -423,10 +432,11 @@ Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps
 # Bugs/Problems
 
 -   Achievements are disabled due to enabling cheats
+    -   A cheat-free variant is planned
 -   Potential weapon/mechanic spoilers from on-screen menus and documentation
     -   Maybe remove some labels but keep icons?
 -   <img src="glyphs/ps4/ls.png" alt="glyph for ls" style="vertical-align: middle; max-height: 4ex"/> click doesn't uncrouch automatically.
-    -   Need to find how directly go into uncrouched state after a
+    -   Need to find how to go directly into uncrouched state after a
         `toggle_duck`. `-duck` doesn't touch the toggled state, so it
         doesn't cut it.
 
@@ -454,8 +464,9 @@ Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps
             feature?
 -   Some features require cheats => find alternatives or make those
     easily optional. An alternate no-cheat cfg file could be easy.
--   Sounds aren't distorted when setting host<sub>timescale</sub> for the
+-   Sounds aren't distorted when setting host\_timescale for the
     slowdown effect. See if there's any way to do this.
+-   Add support for HL2: Update and MMOD
 
 
 <a id="acknowledgments"></a>

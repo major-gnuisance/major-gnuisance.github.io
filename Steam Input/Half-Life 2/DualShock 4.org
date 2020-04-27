@@ -1,7 +1,7 @@
 #+TITLE: Gyro Revolution for Half-Life 2 by Major Gnuisance
 #+AUTHOR: Major Gnuisance
 #+EMAIL: majorgnuisance@gmail.com
-#+OPTIONS: html-style:nil toc:2
+#+OPTIONS: html-style:nil toc:2 ^:nil
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
 # #+MACRO: btn [[file:glyphs/ps4/$1.png]]
 #+MACRO: btn <img src="glyphs/ps4/$1.png" alt="glyph for $1" style="vertical-align: middle; max-height: 4ex"/>
@@ -38,23 +38,29 @@
   :PROPERTIES:
   :CUSTOM_ID: introduction
   :END:
-  
-  This page will help you set up and use a modern control scheme for
-  Half-Life 2 with a DualShock 4 controller, via Steam Input.
 
-  The Installation section will show you how to set everything up.
-  The Controls section will teach you how to use this control scheme.
+  This page will help you set up and use my Steam Input configuration
+  to play Half-Life 2 with a DualShock 4 controller.
+
+  Here's some footage of what playing with this looks like:
+
+  #+BEGIN_EXPORT md
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qoeJINASIuM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  #+END_EXPORT
+
+  Follow either the summarized or detailed Installation section to set
+  everything up, then check out the Controls section details to see
+  how this control scheme works exactly.
 
 * Resource summary
   :PROPERTIES:
   :CUSTOM_ID: resources
   :END:
-  - Custom cfg file: [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]]
-  - Icon pack: [[file:HL2_TouchMenuIcons.zip][=HL2_TouchMenuIcons.zip=]]
+  - Custom cfg file: [[file:gyro_revolution.cfg][gyro_revolution.cfg]]
+  - Icon pack: [[file:HL2_TouchMenuIcons.zip][HL2_TouchMenuIcons.zip]]
   - Controller Configuration
-    - v1.0-beta URL: [[steam://controllerconfig/220/2073106958][=steam://controllerconfig/220/2073106958=]]
-    - VDF file for manual import: [[file:gyro_revolution_hl2_v1.0-beta.vdf][=gyro_revolution_hl2_v1.0-beta.vdf=]]
-  - Changelog: *TODO*
+    - v1.0-beta URL: [[steam://controllerconfig/220/2073106958][steam://controllerconfig/220/2073106958]]
+    - VDF file for manual import: [[file:gyro_revolution_hl2_v1.0-beta.vdf][gyro_revolution_hl2_v1.0-beta.vdf]]
 
 * Installation, summarized
   :PROPERTIES:
@@ -76,10 +82,10 @@
         - Right click game in Steam library > Manage > Browse local files\\
           [[file:manage_browselocalfiles.png]]
      2. Extract the [[file:HL2_TouchMenuIcons.zip][Icon Pack zip]] there. You should now have a =TouchMenuIcons= directory.
-     3. Enter the hl2/cfg/ directory and place the [[file:gyro_revolution.cfg][=gyro_revolution.cfg=]] file there.
+     3. Enter the hl2/cfg/ directory and place the [[file:gyro_revolution.cfg][gyro_revolution.cfg]] file there.
      4. (optional) make a backup of your =config.cfg= file should you want to restore it later.
      5. Add =exec gyro_revolution= to your =autoexec.cfg= file
-        - If you don't have an =autoexec.cfg= file, use this one: *TODO*
+        - If you don't have an =autoexec.cfg= file, use this one: [[file:autoexec.cfg][autoexec.cfg]]
   2. Connect your DualShock 4 to your computer. Either:
      - Wired using a micro USB cable
      - Wireless using Bluetooth
@@ -123,29 +129,31 @@
    :PROPERTIES:
    :CUSTOM_ID: basic_controls
    :END:
-   
-   Use the *right stick* and the *gyroscope* to *move the camera.*
 
-   It's recommended to rely on the gyro to aim precisely and to use
-   the right stick for broader motions only, such as turning,
-   recentering and coarse target acquisition.
+   Use {{{btn(rs)}}} and the *gyroscope* to *move the camera.*
 
-   The gyro is always-on by default, but you can temporarily toggle it
-   off by clicking {{{btn(rs)}}}. This is recommended when driving.
+   It's recommended to rely on the gyro to aim and {{{btn(rs)}}} for
+   broader motions.
 
-   *Hold* {{{btn(l2)}}} to aim more precisely. Gyro is always enabled when doing this.
+   The gyro is always on by default, but you can toggle it on and off
+   by clicking {{{btn(rs)}}}. It's recommended to turn it off when
+   driving outside of combat.
 
-   *Note:* If the camera moves on its own you might be experiencing
-   /gyro drift./ Try recalibrating the gyroscope as explained in the
-   detailed installation instructions.
+   *Hold* {{{btn(l2)}}} to aim more precisely.\\
+   Gyro is always enabled when doing this.
+
+   /Note: If the camera moves on its own you might be experiencing
+   gyro drift./\\
+   /Try recalibrating the gyroscope as explained in the detailed
+   installation instructions if this happens./
 
    Use {{{btn(ls)}}} to *move*.\\
    Click {{{btn(ls)}}} while moving to *sprint.* You will
    stop sprinting when you return the stick to its neutral position.
 
    *Tap* {{{btn(cross)}}} to *jump.*\\
-   *Press* {{{btn(circle)}}} to *use.*\\
    *Tap* {{{btn(triangle)}}} to *toggle crouch.*
+   *Press* {{{btn(circle)}}} to *use.*\\
 
    *Hold* {{{btn(cross)}}} to *crouch while jumping*, which may help extend your
    reach, land tricky jumps or vault over obstacles.\\
@@ -159,9 +167,10 @@
    | Action               | Control                    |
    |----------------------+----------------------------|
    | Move                 | {{{btnbig(ls)}}}           |
+   | Sprint               | {{{btnbig(ls)}}} click     |
    | Move Camera          | Gyro                       |
    | Move Camera (coarse) | {{{btnbig(rs)}}}           |
-   | Sprint               | {{{btnbig(ls)}}} click     |
+   | Toggle gyro          | {{{btnbig(rs)}}} click     |
    | Jump                 | {{{btnbig(cross)}}}        |
    | Crouch-jump          | {{{btnbig(cross)}}} (hold) |
    | Toggle Crouch        | {{{btnbig(triangle)}}}     |
@@ -172,67 +181,71 @@
    :CUSTOM_ID: weapons
    :END:
    *Pull* {{{btn(r2)}}} for primary fire and *press* {{{btn(r1)}}} for secondary fire.
-   *Press* {{{btn(square)}}} to *reload*
+   *Tap* {{{btn(square)}}} to *reload*
 
    *Tap* {{{btn(l1)}}} to swap to your previously selected weapon.\\
-   *Hold* {{{btn(l1)}}} to bring up the *Weapon Select Wheel* and select a weapon
+   *Hold* {{{btn(l1)}}} to bring up the *Weapon Select Wheel* and then select a weapon
    with {{{btn(rs)}}}.
 
-   The *Weapon Select Wheel* is restricted to projectile weapons.
+   Due to usability constraints, not all weapons are in the selection
+   wheel, but they have their own dedicated quick access buttons.
 
-   *Other Weapons* are placed differently:
+   The following weapons have quick access buttons:
    - *Crowbar* on {{{btn(dpadu)}}}
-   - *Grenades* on *Hold* {{{btn(dpadu)}}}
+   - *Grenades* on *Hold* {{{btn(dpadu)}}} and *Hold* {{{btn(square)}}}
    - *Gravity Gun* on {{{btn(dpadd)}}}
-   - *Pheropods* on *Hold* {{{btn(dpadd)}}}
-   - *Squad Commands* on the *right edge of the touchpad*
+   - *Pheropods* on *Hold* {{{btn(dpadd)}}} or icon in {{{btn(touchpad)}}}.
 
    You can also browse and select from available weapons the
-   traditional way with *D-Pad LEFT/RIGHT* and *{{{btn(r2)}}}* to confirm.
+   traditional way with {{{btn(dpadl)}}} and {{{btn(dpadr)}}}. Press
+   {{{btn(r2)}}} to confirm your selection.
 
    #+CAPTION: Summary
-   | Action             | Control                               |
-   |--------------------+---------------------------------------|
-   | Fire               | {{{btnbig(r2)}}}                         |
-   | Secondary fire     | {{{btnbig(r1)}}}                         |
-   | Reload             | {{{btnbig(square)}}}                     |
-   |--------------------+---------------------------------------|
-   | Weapon Wheel       | Hold {{{btnbig(l1)}}} + {{{btnbig(rs)}}}    |
-   | Last Weapon        | Tap {{{btnbig(l1)}}}                     |
-   | Previous/Next Slot | {{{btnbig(dpadl)}}} / {{{btnbig(dpadr)}}} |
-   |--------------------+---------------------------------------|
-   | Crowbar            | {{{btnbig(dpadu)}}}                     |
-   | Gravity Gun (swap) | {{{btnbig(dpadd)}}}                     |
-   | Grenade            | {{{btnbig(dpadu)}}}                     |
-   | Pheropods          | {{{btnbig(dpadd)}}}                     |
-   | Squad              |                                       |
+   | Action             | Control                                                 |
+   |--------------------+---------------------------------------------------------|
+   | Fire               | {{{btnbig(r2)}}}                                        |
+   | Secondary fire     | {{{btnbig(r1)}}}                                        |
+   | Reload             | {{{btnbig(square)}}}                                    |
+   |--------------------+---------------------------------------------------------|
+   | Weapon Wheel       | Hold {{{btnbig(l1)}}} + {{{btnbig(rs)}}}                |
+   | Last Weapon        | Tap {{{btnbig(l1)}}}                                    |
+   | Previous/Next Slot | {{{btnbig(dpadl)}}} / {{{btnbig(dpadr)}}}               |
+   |--------------------+---------------------------------------------------------|
+   | Crowbar            | {{{btnbig(dpadu)}}}                                     |
+   | Gravity Gun (swap) | {{{btnbig(dpadd)}}}                                     |
+   | Grenade            | {{{btnbig(dpadu)}}} (hold), {{{btnbig(square)}}} (hold) |
+   | Pheropods          | {{{btnbig(dpadd)}}} (hold), {{{btnbig(touchpad)}}}      |
 
 ** Utility
    :PROPERTIES:
    :CUSTOM_ID: utility
    :END:
-   Hold down {{{btn(l2)}}} to zoom in and reduce aiming
-   sensitivity. Use it to aim with additional precision.
+   Hold {{{btn(l2)}}} to zoom in and reduce aiming sensitivity.\\
+   Use it to aim with additional precision if necessary.\\
+   This temporarily enables the gyroscope if it's toggled off.
 
    *Hold* {{{btn(triangle)}}} to *toggle the flashlight*.
 
-   *Click and hold* the corresponding touchpad icons to *Quicksave* or
-   *Quickload*. \\
-   The requirement to hold is so that you don't accidentally save or
-   *load your game.
-
    *Click* {{{btn(rs)}}} to toggle the gyroscope.
 
-   *Press* {{{btn(share)}}} to toggle always-on gyro aiming.\\
-   Gyro aiming is always available when holding the Aim button ({{{btn(l2)}}}).\\
+   # *Press* {{{btn(share)}}} to toggle always-on gyro aiming.\\
+   # Gyro aiming is always available when holding the Aim button ({{{btn(l2)}}}).\\
+
+   *Squad Commands* can be found on the *right edge* of {{{btn(touchpad)}}}
+
+   *Click and hold* the corresponding {{{btn(touchpad)}}} icons to
+   *Quicksave* or *Quickload*. \\
+   (The requirement to hold is so that you don't accidentally save or
+   load your game.)
+
 
    #+CAPTION: Summary
    | Action            | Control                     |
    |-------------------+-----------------------------|
-   | Aim mode (ADS)    | {{{btnbig(l2)}}}            |
+   | Aim mode          | {{{btnbig(l2)}}}            |
    | Gyro Toggle       | Click {{{btnbig(rs)}}}      |
    | Flashlight Toggle | Hold {{{btnbig(triangle)}}} |
-   | Quickload/save    | Hold touchpad icons         |
+   | Quickload/save    | {{{btn(touchpad)}}}         |
 
 
 
@@ -240,6 +253,7 @@
   :PROPERTIES:
   :CUSTOM_ID: features
   :END:
+  (TODO: update this section)
   - Weapon Selection Wheel ({{{btn(l1)}}} + {{{btn(rs)}}})
     - Quickly select specific projectile weapons
     - Optional game slowdown when selecting weapon (requires enabling cheats)
@@ -280,10 +294,11 @@
   :CUSTOM_ID: bugs
   :END:
   - Achievements are disabled due to enabling cheats
+    - A cheat-free variant is planned
   - Potential weapon/mechanic spoilers from on-screen menus and documentation
     - Maybe remove some labels but keep icons?
   - {{{btn(ls)}}} click doesn't uncrouch automatically.
-    - Need to find how directly go into uncrouched state after a
+    - Need to find how to go directly into uncrouched state after a
       =toggle_duck=. =-duck= doesn't touch the toggled state, so it
       doesn't cut it.
 
@@ -312,6 +327,7 @@
     easily optional. An alternate no-cheat cfg file could be easy.
   - Sounds aren't distorted when setting host_timescale for the
     slowdown effect. See if there's any way to do this.
+  - Add support for HL2: Update and MMOD
 
 * Acknowledgments
   :PROPERTIES:
