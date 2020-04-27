@@ -3,7 +3,9 @@
 #+EMAIL: majorgnuisance@gmail.com
 #+OPTIONS: html-style:nil toc:2
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
-#+MACRO: btn [[file:glyphs/ps4/$1.png]]
+# #+MACRO: btn [[file:glyphs/ps4/$1.png]]
+#+MACRO: btn <img src="glyphs/ps4/$1.png" alt="glyph for $1" style="vertical-align: middle; max-height: 4ex"/>
+#+MACRO: btnbig <img src="glyphs/ps4/$1.png" alt="glyph for $1" style="vertical-align: middle; max-height: 6ex"/>
 
 :init:
 #+BEGIN_SRC elisp :exports none
@@ -133,12 +135,12 @@
 
    *Hold* {{{btn(l2)}}} to aim more precisely. Gyro is always enabled when doing this.
 
-   **Note:** If the camera moves on its own you might be experiencing
-   **gyro drift.** Try recalibrating the gyroscope as explained in the
+   *Note:* If the camera moves on its own you might be experiencing
+   /gyro drift./ Try recalibrating the gyroscope as explained in the
    detailed installation instructions.
 
    Use {{{btn(ls)}}} to *move*.\\
-   Click *{{{btn(ls)}}}* while moving to *sprint.* You will
+   Click {{{btn(ls)}}} while moving to *sprint.* You will
    stop sprinting when you return the stick to its neutral position.
 
    *Tap* {{{btn(cross)}}} to *jump.*\\
@@ -151,19 +153,19 @@
    situations, usually next to boxes/windows/vents/etc. This is only
    useful for more advanced moves.
 
-   *Press OPTIONS* to *pause.*
+   *Press* {{{btn(options)}}} to *pause.*
 
    #+CAPTION: Summary
    | Action               | Control                 |
    |----------------------+-------------------------|
-   | Move                 | {{{btn(ls)}}}           |
+   | Move                 | {{{btnbig(ls)}}}           |
    | Move Camera          | Gyro                    |
-   | Move Camera (coarse) | {{{btn(rs)}}}           |
-   | Sprint               | {{{btn(ls)}}} click     |
-   | Jump                 | {{{btn(cross)}}}        |
-   | Crouch-jump          | {{{btn(cross)}}} (hold) |
-   | Toggle Crouch        | {{{btn(triangle)}}}     |
-   | Pause                | {{{btn(options)}}}      |
+   | Move Camera (coarse) | {{{btnbig(rs)}}}           |
+   | Sprint               | {{{btnbig(ls)}}} click     |
+   | Jump                 | {{{btnbig(cross)}}}        |
+   | Crouch-jump          | {{{btnbig(cross)}}} (hold) |
+   | Toggle Crouch        | {{{btnbig(triangle)}}}     |
+   | Pause                | {{{btnbig(options)}}}      |
 
 ** Weapons
    :PROPERTIES:
@@ -172,9 +174,9 @@
    *Pull {{{btn(r2)}}}* for primary fire and *press {{{btn(r1)}}}* for secondary fire.
    *Press {{{btn(square)}}}* to *reload*
 
-   *Tap {{{btn(l1)}}}* to swap to your previously selected weapon.\\
-   *Hold {{{btn(l1)}}}* to bring up the *Weapon Select Wheel* and select a weapon
-   *with the *right stick*.
+   *Tap* {{{btn(l1)}}} to swap to your previously selected weapon.\\
+   *Hold* {{{btn(l1)}}} to bring up the *Weapon Select Wheel* and select a weapon
+   with {{{btn(rs)}}}.
 
    The *Weapon Select Wheel* is restricted to projectile weapons.
 
@@ -192,18 +194,18 @@
    #+CAPTION: Summary
    | Action             | Control                               |
    |--------------------+---------------------------------------|
-   | Fire               | {{{btn(r2)}}}                         |
-   | Secondary fire     | {{{btn(r1)}}}                         |
-   | Reload             | {{{btn(square)}}}                     |
+   | Fire               | {{{btnbig(r2)}}}                         |
+   | Secondary fire     | {{{btnbig(r1)}}}                         |
+   | Reload             | {{{btnbig(square)}}}                     |
    |--------------------+---------------------------------------|
-   | Weapon Wheel       | Hold {{{btn(l1)}}} + {{{btn(rs)}}}    |
-   | Last Weapon        | Tap {{{btn(l1)}}}                     |
-   | Previous/Next Slot | {{{btn(dpad_l)}}} / {{{btn(dpad_r)}}} |
+   | Weapon Wheel       | Hold {{{btnbig(l1)}}} + {{{btnbig(rs)}}}    |
+   | Last Weapon        | Tap {{{btnbig(l1)}}}                     |
+   | Previous/Next Slot | {{{btnbig(dpadl)}}} / {{{btnbig(dpadr)}}} |
    |--------------------+---------------------------------------|
-   | Crowbar            | {{{btn(dpad_u)}}}                     |
-   | Gravity Gun (swap) | {{{btn(dpad_d)}}}                     |
-   | Grenade            | {{{btn(dpad_u)}}}                     |
-   | Pheropods          | {{{btn(dpad_d)}}}                     |
+   | Crowbar            | {{{btnbig(dpadu)}}}                     |
+   | Gravity Gun (swap) | {{{btnbig(dpadd)}}}                     |
+   | Grenade            | {{{btnbig(dpadu)}}}                     |
+   | Pheropods          | {{{btnbig(dpadd)}}}                     |
    | Squad              |                                       |
 
 ** Utility
@@ -230,13 +232,13 @@
    #+CAPTION: Summary
    | Action                | Control                  |
    |-----------------------+--------------------------|
-   | Aim mode (ADS)        | {{{btn(l2)}}}            |
-   | Flashlight Toggle     | Hold {{{btn(triangle)}}} |
+   | Aim mode (ADS)        | {{{btnbig(l2)}}}            |
+   | Flashlight Toggle     | Hold {{{btnbig(triangle)}}} |
    | Quickload/save        | Hold touchpad icons      |
    |-----------------------+--------------------------|
-   | Gyro Stop             | Hold {{{btn(r3)}}}       |
-   | Gyro always-on toggle | {{{btn(share)}}}         |
-   | Enable Gyro always-on | Tap {{{btn(r3)}}}        |
+   | Gyro Stop             | Hold {{{btnbig(r3)}}}       |
+   | Gyro always-on toggle | {{{btnbig(share)}}}         |
+   | Enable Gyro always-on | Tap {{{btnbig(r3)}}}        |
 
 
 * Feature List
@@ -255,8 +257,8 @@
   - Modern sprint button ({{{btn(ls)}}})
     - Click once while moving to start sprinting, return stick to center
       position to stop sprinting.
-  - Direct quick access to Crowbar and Gravity Gun ({{{btn(dpad_u)}}} / {{{btn(dpad_d)}}})
-  - Sequential weapon select ({{{btn(dpad_l)}}} / {{{btn(dpad_r)}}})
+  - Direct quick access to Crowbar and Gravity Gun ({{{btn(dpadu)}}} / {{{btn(dpadd)}}})
+  - Sequential weapon select ({{{btn(dpadl)}}} / {{{btn(dpadr)}}})
   - Gyroscope aim
     - Always on by default
     - Can be temporarily stopped by holding {{{btn(rs)}}}
