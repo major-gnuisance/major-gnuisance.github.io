@@ -3,6 +3,7 @@
 #+EMAIL: majorgnuisance@gmail.com
 #+OPTIONS: html-style:nil toc:2
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="style.css" />
+#+MACRO: btn [[file:glyphs/ps4/$1.png]]
 
 :init:
 #+BEGIN_SRC elisp :exports none
@@ -101,7 +102,7 @@
   4. Import my configuration
      1. [[steam://controllerconfig/220/2073106958][Click here]] to open the configuration in Steam. It should open this screen:\\
         [[file:bpm_configpreview.png]]
-     2. Press Square to apply, then Circle to exit
+     2. Press {{{btn(square)}}} to apply, then {{{btn(circle)}}} to exit
   5. Play the game!
 
 * Removal
@@ -128,22 +129,23 @@
    recentering and coarse target acquisition.
 
    The gyro is always-on by default, but you can temporarily toggle it
-   off by clicking the right stick (*R3*). This is recommended when driving.
+   off by clicking {{{btn(rs)}}}. This is recommended when driving.
 
-   Hold *L2* to aim more precisely. Gyro is always enabled when doing this.
+   *Hold* {{{btn(l2)}}} to aim more precisely. Gyro is always enabled when doing this.
 
-   If the camera moves on its own, you need to recalibrate the
-   gyroscope as explained in the detailed installation instructions.
+   **Note:** If the camera moves on its own you might be experiencing
+   **gyro drift.** Try recalibrating the gyroscope as explained in the
+   detailed installation instructions.
 
-   Use the *left stick* to *move*.\\
-   Click *L3* (left stick click) while moving to *sprint.* You will
+   Use {{{btn(ls)}}} to *move*.\\
+   Click *{{{btn(ls)}}}* while moving to *sprint.* You will
    stop sprinting when you return the stick to its neutral position.
 
-   *Tap X* to *jump.*\\
-   *Press Circle* to *use.*\\
-   *Tap Triangle* to *toggle crouch.*
+   *Tap* {{{btn(cross)}}} to *jump.*\\
+   *Press* {{{btn(circle)}}} to *use.*\\
+   *Tap* {{{btn(triangle)}}} to *toggle crouch.*
 
-   *Hold X* to *crouch while jumping*, which may help extend your
+   *Hold* {{{btn(cross)}}} to *crouch while jumping*, which may help extend your
    reach, land tricky jumps or vault over obstacles.\\
    Note: the game itself automatically crouch jumps in some
    situations, usually next to boxes/windows/vents/etc. This is only
@@ -152,26 +154,26 @@
    *Press OPTIONS* to *pause.*
 
    #+CAPTION: Summary
-   | Action               | Control                  |
-   |----------------------+--------------------------|
-   | Move                 | LS - Left Stick          |
-   | Move Camera          | Gyro - Controller Motion |
-   | Move Camera (coarse) | RS - Right Stick         |
-   | Sprint               | L3 - Left Stick Click    |
-   | Jump                 | X                        |
-   | Crouch-jump          | X (hold)                 |
-   | Toggle Crouch        | Triangle                 |
-   | Pause                | OPTIONS                  |
+   | Action               | Control                 |
+   |----------------------+-------------------------|
+   | Move                 | {{{btn(ls)}}}           |
+   | Move Camera          | Gyro                    |
+   | Move Camera (coarse) | {{{btn(rs)}}}           |
+   | Sprint               | {{{btn(ls)}}} click     |
+   | Jump                 | {{{btn(cross)}}}        |
+   | Crouch-jump          | {{{btn(cross)}}} (hold) |
+   | Toggle Crouch        | {{{btn(triangle)}}}     |
+   | Pause                | {{{btn(options)}}}      |
 
 ** Weapons
    :PROPERTIES:
    :CUSTOM_ID: weapons
    :END:
-   *Pull R2* for primary fire and *press R1* for secondary fire.
-   *Press Square* to *reload*
+   *Pull {{{btn(r2)}}}* for primary fire and *press {{{btn(r1)}}}* for secondary fire.
+   *Press {{{btn(square)}}}* to *reload*
 
-   *Tap L1* to swap to your previously selected weapon.\\
-   *Hold L1* to bring up the *Weapon Select Wheel* and select a weapon
+   *Tap {{{btn(l1)}}}* to swap to your previously selected weapon.\\
+   *Hold {{{btn(l1)}}}* to bring up the *Weapon Select Wheel* and select a weapon
    *with the *right stick*.
 
    The *Weapon Select Wheel* is restricted to projectile weapons.
@@ -185,91 +187,91 @@
    - *Squad Commands* on the *left edge of the touchpad*
 
    You can also browse and select from available weapons the
-   traditional way with *D-Pad LEFT/RIGHT* and *R2* to confirm.
+   traditional way with *D-Pad LEFT/RIGHT* and *{{{btn(r2)}}}* to confirm.
 
    #+CAPTION: Summary
-   | Action             | Control              |
-   |--------------------+----------------------|
-   | Fire               | R2                   |
-   | Secondary fire     | R1                   |
-   | Reload             | Square               |
-   |--------------------+----------------------|
-   | Weapon Wheel       | Hold L1 + RS         |
-   | Last Weapon        | Tap L1               |
-   | Previous/Next Slot | D-Pad LEFT/RIGHT     |
-   |--------------------+----------------------|
-   | Crowbar            | D-Pad UP             |
-   | Gravity Gun (swap) | D-Pad DOWN           |
-   | Grenade            | Hold D-Pad UP        |
-   | Pheropod           | Hold D-Pad DOWN      |
-   | RPG                | Touchpad, right edge |
-   | Squad              | Touchpad, left edge  |
+   | Action             | Control                               |
+   |--------------------+---------------------------------------|
+   | Fire               | {{{btn(r2)}}}                         |
+   | Secondary fire     | {{{btn(r1)}}}                         |
+   | Reload             | {{{btn(square)}}}                     |
+   |--------------------+---------------------------------------|
+   | Weapon Wheel       | Hold {{{btn(l1)}}} + {{{btn(rs)}}}    |
+   | Last Weapon        | Tap {{{btn(l1)}}}                     |
+   | Previous/Next Slot | {{{btn(dpad_l)}}} / {{{btn(dpad_r)}}} |
+   |--------------------+---------------------------------------|
+   | Crowbar            | {{{btn(dpad_u)}}}                     |
+   | Gravity Gun (swap) | {{{btn(dpad_d)}}}                     |
+   | Grenade            | {{{btn(dpad_u)}}}                     |
+   | Pheropods          | {{{btn(dpad_d)}}}                     |
+   | Squad              |                                       |
 
 ** Utility
    :PROPERTIES:
    :CUSTOM_ID: utility
    :END:
-   Hold down *L2* (left trigger) to zoom in and reduce aiming
+   Hold down {{{btn(l2)}}} to zoom in and reduce aiming
    sensitivity. Use it to aim with additional precision.
 
-   *Hold Y* to *toggle the flashlight*.
+   *Hold* {{{btn(triangle)}}} to *toggle the flashlight*.
 
    *Click and hold* the corresponding touchpad icons to *Quicksave* or
    *Quickload*. \\
    The requirement to hold is so that you don't accidentally save or
    *load your game.
 
-   *Hold R3* to temporarily disable the gyroscope, allowing you to
+   *Hold* {{{btn(r3)}}} to temporarily disable the gyroscope, allowing you to
    reposition the controller without whipping the camera around.
 
    *Press SHARE* to toggle always-on gyro aiming.\\
-   Gyro aiming will still be available when holding the Aim button (L2).\\
-   *Press R3* to quickly reenable always-on gyro aiming.
+   Gyro aiming will still be available when holding the Aim button ({{{btn(l2)}}}).\\
+   *Press* {{{btn(r3)}}} to quickly re-enable always-on gyro aiming.
 
    #+CAPTION: Summary
-   | Action                | Control             |
-   |-----------------------+---------------------|
-   | Aim mode (ADS)        | L2                  |
-   | Flashlight Toggle     | Hold Triangle       |
-   | Quickload/save        | Hold touchpad icons |
-   |-----------------------+---------------------|
-   | Gyro Stop             | Hold R3             |
-   | Gyro always-on toggle | SHARE               |
-   | Enable Gyro always-on | Tap R3              |
+   | Action                | Control                  |
+   |-----------------------+--------------------------|
+   | Aim mode (ADS)        | {{{btn(l2)}}}            |
+   | Flashlight Toggle     | Hold {{{btn(triangle)}}} |
+   | Quickload/save        | Hold touchpad icons      |
+   |-----------------------+--------------------------|
+   | Gyro Stop             | Hold {{{btn(r3)}}}       |
+   | Gyro always-on toggle | {{{btn(share)}}}         |
+   | Enable Gyro always-on | Tap {{{btn(r3)}}}        |
 
 
 * Feature List
   :PROPERTIES:
   :CUSTOM_ID: features
   :END:
-  - Weapon Selection Wheel (L1 + RS)
+  - Weapon Selection Wheel ({{{btn(l1)}}} + {{{btn(rs)}}})
     - Quickly select specific projectile weapons
     - Optional game slowdown when selecting weapon (requires enabling cheats)
     - Toggle to last weapon by tapping weapon wheel button
   - Quick access to special weapons with D-Pad UP/DOWN
-  - (pseudo) Aim Down Sights button (L2)
+  - (pseudo) Aim Down Sights button ({{{btn(l2)}}})
     - Zooms in and lowers sensitivity for finer aiming
     - Higher magnification requires enabling cheats
     - Doesn't really aim down sights. Get an actual mod for that
-  - Modern sprint button (L3)
+  - Modern sprint button ({{{btn(ls)}}})
     - Click once while moving to start sprinting, return stick to center
       position to stop sprinting.
-  - Direct access to Crowbar and Gravity Gun (D-Pad UP/DOWN respectively)
-  - Sequential weapon select (D-Pad LEFT/RIGHT)
+  - Direct quick access to Crowbar and Gravity Gun ({{{btn(dpad_u)}}} / {{{btn(dpad_d)}}})
+  - Sequential weapon select ({{{btn(dpad_l)}}} / {{{btn(dpad_r)}}})
   - Gyroscope aim
     - Always on by default
-    - Can be temporarily stopped by holding R3
-      - e.g. hold R3 while readjusting your pose to avoid swinging the
+    - Can be temporarily stopped by holding {{{btn(rs)}}}
+      - e.g. hold {{{btn(rs)}}} while readjusting your pose to avoid swinging the
         camera around
     - Gyro can be turned on/off with OPTIONS button
-      - Still when holding ADS button (L2)
-      - Can be enabled again on a moment's notice by tapping R3
+      - Still when holding ADS button ({{{btn(l2)}}})
+      - Can be enabled again on a moment's notice by tapping {{{btn(rs)}}}
   - Quickload and Quicksave with safety (hold to trigger) on trackpad
   - Menu interaction mode
     - Triggers automatically when the mouse pointer is displayed,
       returns to game mode when the mouse is hidden
-    - Trackpad and RS can be used to move the mouse, R3 and Touchpad
-      click for Left Mouse Button
+    - {{{btn(touchpad)}}} and {{{btn(rs)}}} can be used to move the mouse,
+      {{{btn(rs)}}} click and {{{btn(touchpad)}}} click for Left Mouse
+      Button
   - Squad Command and Pheropods on left edge of trackpad
   - Custom Steam Input Icons for Half-Life 2's Weapons
     - Derived from game assets
@@ -283,9 +285,10 @@
   - Achievements are disabled due to enabling cheats
   - Potential weapon/mechanic spoilers from on-screen menus and documentation
     - Maybe remove some labels but keep icons?
-  - L3 doesn't uncrouch automatically.
-    - Need to find how directly go into uncrouched state after
-      a =toggle_duck=. =-duck= doesn't cut it.
+  - {{{btn(ls)}}} click doesn't uncrouch automatically.
+    - Need to find how directly go into uncrouched state after a
+      =toggle_duck=. =-duck= doesn't touch the toggled state, so it
+      doesn't cut it.
 
 * Possible Improvements
   :PROPERTIES:
@@ -312,3 +315,11 @@
     easily optional. An alternate no-cheat cfg file could be easy.
   - Sounds aren't distorted when setting host_timescale for the
     slowdown effect. See if there's any way to do this.
+
+* Acknowledgments
+  :PROPERTIES:
+  :CUSTOM_ID: acknowledgments
+  :END:
+
+  - The awesome guys at [[https://thoseawesomeguys.com/][THOSE AWESOME GUYS]] for their [[https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack][free controller
+    glyph pack]]
