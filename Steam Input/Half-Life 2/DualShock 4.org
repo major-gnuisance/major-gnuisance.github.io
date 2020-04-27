@@ -156,10 +156,10 @@
    *Press* {{{btn(options)}}} to *pause.*
 
    #+CAPTION: Summary
-   | Action               | Control                 |
-   |----------------------+-------------------------|
+   | Action               | Control                    |
+   |----------------------+----------------------------|
    | Move                 | {{{btnbig(ls)}}}           |
-   | Move Camera          | Gyro                    |
+   | Move Camera          | Gyro                       |
    | Move Camera (coarse) | {{{btnbig(rs)}}}           |
    | Sprint               | {{{btnbig(ls)}}} click     |
    | Jump                 | {{{btnbig(cross)}}}        |
@@ -171,8 +171,8 @@
    :PROPERTIES:
    :CUSTOM_ID: weapons
    :END:
-   *Pull {{{btn(r2)}}}* for primary fire and *press {{{btn(r1)}}}* for secondary fire.
-   *Press {{{btn(square)}}}* to *reload*
+   *Pull* {{{btn(r2)}}} for primary fire and *press* {{{btn(r1)}}} for secondary fire.
+   *Press* {{{btn(square)}}} to *reload*
 
    *Tap* {{{btn(l1)}}} to swap to your previously selected weapon.\\
    *Hold* {{{btn(l1)}}} to bring up the *Weapon Select Wheel* and select a weapon
@@ -181,12 +181,11 @@
    The *Weapon Select Wheel* is restricted to projectile weapons.
 
    *Other Weapons* are placed differently:
-   - *Crowbar* on *D-Pad UP*
-   - *Grenades* on *Hold D-Pad UP*
-   - *Gravity Gun* on *D-Pad DOWD*
-   - *Pheropods* on *Hold D-Pad DOWN*
-   - *RPG* on the *right edge of the touchpad*
-   - *Squad Commands* on the *left edge of the touchpad*
+   - *Crowbar* on {{{btn(dpadu)}}}
+   - *Grenades* on *Hold* {{{btn(dpadu)}}}
+   - *Gravity Gun* on {{{btn(dpadd)}}}
+   - *Pheropods* on *Hold* {{{btn(dpadd)}}}
+   - *Squad Commands* on the *right edge of the touchpad*
 
    You can also browse and select from available weapons the
    traditional way with *D-Pad LEFT/RIGHT* and *{{{btn(r2)}}}* to confirm.
@@ -222,23 +221,19 @@
    The requirement to hold is so that you don't accidentally save or
    *load your game.
 
-   *Hold* {{{btn(r3)}}} to temporarily disable the gyroscope, allowing you to
-   reposition the controller without whipping the camera around.
+   *Click* {{{btn(rs)}}} to toggle the gyroscope.
 
-   *Press SHARE* to toggle always-on gyro aiming.\\
-   Gyro aiming will still be available when holding the Aim button ({{{btn(l2)}}}).\\
-   *Press* {{{btn(r3)}}} to quickly re-enable always-on gyro aiming.
+   *Press* {{{btn(share)}}} to toggle always-on gyro aiming.\\
+   Gyro aiming is always available when holding the Aim button ({{{btn(l2)}}}).\\
 
    #+CAPTION: Summary
-   | Action                | Control                  |
-   |-----------------------+--------------------------|
-   | Aim mode (ADS)        | {{{btnbig(l2)}}}            |
-   | Flashlight Toggle     | Hold {{{btnbig(triangle)}}} |
-   | Quickload/save        | Hold touchpad icons      |
-   |-----------------------+--------------------------|
-   | Gyro Stop             | Hold {{{btnbig(r3)}}}       |
-   | Gyro always-on toggle | {{{btnbig(share)}}}         |
-   | Enable Gyro always-on | Tap {{{btnbig(r3)}}}        |
+   | Action            | Control                     |
+   |-------------------+-----------------------------|
+   | Aim mode (ADS)    | {{{btnbig(l2)}}}            |
+   | Gyro Toggle       | Click {{{btnbig(rs)}}}      |
+   | Flashlight Toggle | Hold {{{btnbig(triangle)}}} |
+   | Quickload/save    | Hold touchpad icons         |
+
 
 
 * Feature List

@@ -211,8 +211,8 @@ useful for more advanced moves.
 
 ## Weapons
 
-**Pull <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/>** for primary fire and **press <img src="glyphs/ps4/r1.png" alt="glyph for r1" style="vertical-align: middle; max-height: 4ex"/>** for secondary fire.
-**Press <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/>** to **reload**
+**Pull** <img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/> for primary fire and **press** <img src="glyphs/ps4/r1.png" alt="glyph for r1" style="vertical-align: middle; max-height: 4ex"/> for secondary fire.
+**Press** <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to **reload**
 
 **Tap** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to swap to your previously selected weapon.  
 **Hold** <img src="glyphs/ps4/l1.png" alt="glyph for l1" style="vertical-align: middle; max-height: 4ex"/> to bring up the **Weapon Select Wheel** and select a weapon
@@ -222,12 +222,11 @@ The **Weapon Select Wheel** is restricted to projectile weapons.
 
 **Other Weapons** are placed differently:
 
--   **Crowbar** on **D-Pad UP**
--   **Grenades** on **Hold D-Pad UP**
--   **Gravity Gun** on **D-Pad DOWD**
--   **Pheropods** on **Hold D-Pad DOWN**
--   **RPG** on the **right edge of the touchpad**
--   **Squad Commands** on the **left edge of the touchpad**
+-   **Crowbar** on <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/>
+-   **Grenades** on **Hold** <img src="glyphs/ps4/dpadu.png" alt="glyph for dpadu" style="vertical-align: middle; max-height: 4ex"/>
+-   **Gravity Gun** on <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>
+-   **Pheropods** on **Hold** <img src="glyphs/ps4/dpadd.png" alt="glyph for dpadd" style="vertical-align: middle; max-height: 4ex"/>
+-   **Squad Commands** on the **right edge of the touchpad**
 
 You can also browse and select from available weapons the
 traditional way with **D-Pad LEFT/RIGHT** and **<img src="glyphs/ps4/r2.png" alt="glyph for r2" style="vertical-align: middle; max-height: 4ex"/>** to confirm.
@@ -332,12 +331,10 @@ sensitivity. Use it to aim with additional precision.
 The requirement to hold is so that you don't accidentally save or
 \*load your game.
 
-**Hold** <img src="glyphs/ps4/r3.png" alt="glyph for r3" style="vertical-align: middle; max-height: 4ex"/> to temporarily disable the gyroscope, allowing you to
-reposition the controller without whipping the camera around.
+**Click** <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 4ex"/> to toggle the gyroscope.
 
-**Press SHARE** to toggle always-on gyro aiming.  
-Gyro aiming will still be available when holding the Aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>).  
-**Press** <img src="glyphs/ps4/r3.png" alt="glyph for r3" style="vertical-align: middle; max-height: 4ex"/> to quickly re-enable always-on gyro aiming.
+**Press** <img src="glyphs/ps4/share.png" alt="glyph for share" style="vertical-align: middle; max-height: 4ex"/> to toggle always-on gyro aiming.  
+Gyro aiming is always available when holding the Aim button (<img src="glyphs/ps4/l2.png" alt="glyph for l2" style="vertical-align: middle; max-height: 4ex"/>).  
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> Summary</caption>
@@ -362,6 +359,12 @@ Gyro aiming will still be available when holding the Aim button (<img src="glyph
 
 
 <tr>
+<td class="org-left">Gyro Toggle</td>
+<td class="org-left">Click <img src="glyphs/ps4/rs.png" alt="glyph for rs" style="vertical-align: middle; max-height: 6ex"/></td>
+</tr>
+
+
+<tr>
 <td class="org-left">Flashlight Toggle</td>
 <td class="org-left">Hold <img src="glyphs/ps4/triangle.png" alt="glyph for triangle" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
@@ -370,25 +373,6 @@ Gyro aiming will still be available when holding the Aim button (<img src="glyph
 <tr>
 <td class="org-left">Quickload/save</td>
 <td class="org-left">Hold touchpad icons</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="org-left">Gyro Stop</td>
-<td class="org-left">Hold <img src="glyphs/ps4/r3.png" alt="glyph for r3" style="vertical-align: middle; max-height: 6ex"/></td>
-</tr>
-
-
-<tr>
-<td class="org-left">Gyro always-on toggle</td>
-<td class="org-left"><img src="glyphs/ps4/share.png" alt="glyph for share" style="vertical-align: middle; max-height: 6ex"/></td>
-</tr>
-
-
-<tr>
-<td class="org-left">Enable Gyro always-on</td>
-<td class="org-left">Tap <img src="glyphs/ps4/r3.png" alt="glyph for r3" style="vertical-align: middle; max-height: 6ex"/></td>
 </tr>
 </tbody>
 </table>
