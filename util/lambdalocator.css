@@ -1,0 +1,50 @@
+
+      html {
+          font-family: "sans-serif";
+          background: #333;
+          color: #e83;
+      }
+      body {
+          min-height: 100vh;
+      }
+#box{
+    padding: 0 3ex;
+    border: solid 1px #e83;
+    border-radius: 1ex;
+    max-width: max-content;
+    background: #222;
+}
+h3 {
+    padding: .5ex 0;
+    border-bottom: solid 1px;
+}
+      .light {
+          opacity: 60%;
+      }
+      .small {
+          font-size: 0.8em;
+      }
+      [type=text] {
+          background: #503500;
+          color: inherit;
+          border-color: #704000;
+      }
+      #output {
+          font-family: monospace;
+          padding: 1ex;
+          border-radius: 1ex;
+          margin: 3ex;
+          line-height: 4ex;
+          font-size: 1.3em;
+          width: max-content;
+          transition: background-color 1s, color 1s;
+          background-color: #503500;
+      }
+      #output.success{
+          background-color: #252;
+      }
+      #output.error {
+          background-color: #822;
+          color: #fe2;
+      }
+    
