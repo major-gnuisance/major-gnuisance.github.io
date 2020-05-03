@@ -15,7 +15,10 @@ by Major Gnuisance
 7.  [Feature List](#features)
 8.  [Bugs/Problems](#bugs)
 9.  [Possible Improvements](#improvements)
-10. [Acknowledgments](#acknowledgments)
+10. [Changelog](#changelog)
+    1.  [v1.0-beta](#v1.0-beta)
+    2.  [v1.1](#v1.1)
+11. [Acknowledgments](#acknowledgments)
 
 
 
@@ -42,8 +45,8 @@ how this control scheme works exactly.
 -   Custom cfg file: [gyro\_revolution.cfg](gyro_revolution.cfg)
 -   Icon pack: [HL2\_TouchMenuIcons.zip](HL2_TouchMenuIcons.zip)
 -   Controller Configuration
-    -   v1.0-beta URL: [steam://controllerconfig/220/2073106958](steam://controllerconfig/220/2073106958)
-    -   VDF file for manual import: [gyro\_revolution\_hl2\_v1.0-beta.vdf](gyro_revolution_hl2_v1.0-beta.vdf)
+    -   v1.1 URL: [steam://controllerconfig/220/2083662274](steam://controllerconfig/220/2083662274)
+    -   VDF file for manual import: [gyro\_revolution\_hl2\_v1.1.vdf](gyro_revolution_hl2_v1.1.vdf)
 
 
 <a id="installation"></a>
@@ -52,10 +55,11 @@ how this control scheme works exactly.
 
 1.  Extract icon pack into game's directory (`Half-Life 2`)
 2.  Put `gyro_revolution.cfg` under the `hl2/cfg/` directory
-3.  Add line with "`exec gyro_revolution`" to your `autoexec.cfg` file in the same directory (`hl2/cfg`). Create if necessary.
+3.  Add line with `exec gyro_revolution` to your `autoexec.cfg` file in the same directory (`hl2/cfg`). You can use [this autoexec.cfg](autoexec.cfg) if you don't have one, instead.
 4.  Connect DS4 controller
 5.  Enable PlayStation Configuration Support in Big Picture, if not already enabled
 6.  Import my configuration
+7.  (Linux only) Remove the file at `<GAME_DIRECTORY>/bin/libSDL2-2.0.so.0`
 
 
 <a id="installation_detailed"></a>
@@ -96,7 +100,12 @@ how this control scheme works exactly.
     1.  [Click here](steam://controllerconfig/220/2073106958) to open the configuration in Steam. It should open this screen:  
         ![img](bpm_configpreview.png)
     2.  Press <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to apply, then <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to exit
-5.  Play the game!
+5.  (Linux only) Remove the \`libSDL2-2.0.so.0\` file in the game
+    files, under the \`bin/\` directory. It's outdated as of May 3rd
+    2020 and it can cause double input problems. The version included
+    in the Steam Runtime works fine and will automatically be used
+    instead.
+6.  Play the game!
 
 
 <a id="uninstall"></a>
@@ -505,6 +514,7 @@ In this mode, the following controls are available:
     -   Idea: make a dynamic re-aliasing-based binding that
         increments/decrements stuff progressively upon repeated presses
         and couple it with a turbo activator. Could be brittle, though.
+        -   Tried and failed. The turbo doesn't go fast enough to be smooth.
 -   Full gyro off mode (if anyone asks for it)
 -   Fine tune sensitivities and timings
 -   Find way to hide spoilers until needed
@@ -516,9 +526,42 @@ In this mode, the following controls are available:
             feature?
 -   Some features require cheats => find alternatives or make those
     easily optional. An alternate no-cheat cfg file could be easy.
+    -   Made it tunable in Section 5 of \`gyro\_revolution.cfg\`
 -   Sounds aren't distorted when setting host\_timescale for the
     slowdown effect. See if there's any way to do this.
 -   Add support for HL2: Update and MMOD
+-   Test with Episode 1 & 2
+-   Port to Steam Controller
+-   Port to Half-Life 1
+
+
+<a id="changelog"></a>
+
+# Changelog
+
+
+<a id="v1.0-beta"></a>
+
+## v1.0-beta
+
+-   Initial public release
+
+
+<a id="v1.1"></a>
+
+## v1.1
+
+-   Tweak trigger sensitivities
+-   Rearrange touchpad menus
+-   Fix Windows compatibility
+    -   Fix sprint not resetting because Windows HL2 doesn't respond to
+        KP\_SLASH binding with some keyboard layouts
+    -   Fix OPTIONS not being bound (which was workaround for double
+        input on Linux caused by the outdated SDL shipped with game)
+-   Add fast forward button
+-   Make tuning some parameters in \`gyro\_revolutio.cfg\` easier
+-   Add versioning information to \`gyro\_revolution.cfg\`
+-   Add warning about SDL on Linux
 
 
 <a id="acknowledgments"></a>
