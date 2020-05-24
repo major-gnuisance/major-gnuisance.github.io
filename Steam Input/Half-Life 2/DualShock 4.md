@@ -58,7 +58,7 @@ how this control scheme works exactly.
 3.  Add line with `exec gyro_revolution` to your `autoexec.cfg` file in the same directory (`hl2/cfg`). You can use [this autoexec.cfg](autoexec.cfg) if you don't have one, instead.
 4.  Connect DS4 controller
 5.  Enable PlayStation Configuration Support in Big Picture, if not already enabled
-6.  Import my configuration
+6.  Import my controller configuration (link above)
 7.  (Linux only) Remove the file at `<GAME_DIRECTORY>/bin/libSDL2-2.0.so.0`
 
 
@@ -97,7 +97,7 @@ how this control scheme works exactly.
         ![img](bpm_startgyrocalibration.png)
     7.  Make sure the controller stays completely still until the calibration is done (about 5 seconds).
 4.  Import my configuration
-    1.  [Click here](steam://controllerconfig/220/2073106958) to open the configuration in Steam. It should open this screen:  
+    1.  [Click here](steam://controllerconfig/220/2083662274) to open the configuration in Steam. It should open this screen:  
         ![img](bpm_configpreview.png)
     2.  Press <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to apply, then <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to exit
 5.  (Linux only) Remove the \`libSDL2-2.0.so.0\` file in the game
@@ -571,4 +571,6 @@ In this mode, the following controls are available:
 -   The awesome guys at [THOSE AWESOME GUYS](https://thoseawesomeguys.com/) for their [free controller
     glyph pack](https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack)
 -   The [r/SteamController](https://www.reddit.com/r/SteamController/) community
+-   Testing/debugging
+    -   [Mister Man](https://www.youtube.com/channel/UCIQuALUrT-vH919klEze_vQ)
 

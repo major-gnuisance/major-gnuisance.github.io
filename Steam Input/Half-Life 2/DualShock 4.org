@@ -71,7 +71,7 @@
   3. Add line with =exec gyro_revolution= to your =autoexec.cfg= file in the same directory (=hl2/cfg=). You can use [[file:autoexec.cfg][this autoexec.cfg]] if you don't have one, instead.
   4. Connect DS4 controller
   5. Enable PlayStation Configuration Support in Big Picture, if not already enabled
-  6. Import my configuration
+  6. Import my controller configuration (link above)
   7. (Linux only) Remove the file at =<GAME_DIRECTORY>/bin/libSDL2-2.0.so.0=
 
 * Installation, detailed
@@ -109,7 +109,7 @@
         [[file:bpm_startgyrocalibration.png]]
      7. Make sure the controller stays completely still until the calibration is done (about 5 seconds).
   4. Import my configuration
-     1. [[steam://controllerconfig/220/2073106958][Click here]] to open the configuration in Steam. It should open this screen:\\
+     1. [[steam://controllerconfig/220/2083662274][Click here]] to open the configuration in Steam. It should open this screen:\\
         [[file:bpm_configpreview.png]]
      2. Press {{{btn(square)}}} to apply, then {{{btn(circle)}}} to exit
   5. (Linux only) Remove the `libSDL2-2.0.so.0` file in the game
@@ -385,3 +385,5 @@
   - The awesome guys at [[https://thoseawesomeguys.com/][THOSE AWESOME GUYS]] for their [[https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack][free controller
     glyph pack]]
   - The [[https://www.reddit.com/r/SteamController/][r/SteamController]] community
+  - Testing/debugging
+    - [[https://www.youtube.com/channel/UCIQuALUrT-vH919klEze_vQ][Mister Man]]
