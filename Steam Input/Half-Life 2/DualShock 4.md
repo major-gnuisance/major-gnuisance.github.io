@@ -18,7 +18,9 @@ by Major Gnuisance
 10. [Changelog](#changelog)
     1.  [v1.0-beta](#v1.0-beta)
     2.  [v1.1](#v1.1)
+    3.  [v1.1.1](#v1.1.1)
 11. [Acknowledgments](#acknowledgments)
+12. [Contact](#contact)
 
 
 
@@ -45,7 +47,10 @@ how this control scheme works exactly.
 -   Custom cfg file: [gyro\_revolution.cfg](gyro_revolution.cfg)
 -   Icon pack: [HL2\_TouchMenuIcons.zip](HL2_TouchMenuIcons.zip)
 -   Controller Configuration
-    -   v1.1 URL: [steam://controllerconfig/220/2083662274](steam://controllerconfig/220/2083662274)
+    -   v1.1 URLs:
+        -   Half-Life 2: [steam://controllerconfig/220/2083662274](steam://controllerconfig/220/2083662274)
+        -   Half-Life 2 Episode 1: [steam://controllerconfig/380/2083662274](steam://controllerconfig/380/2083662274)
+        -   Half-Life 2 Episode 2: [steam://controllerconfig/420/2083662274](steam://controllerconfig/420/2083662274)
     -   VDF file for manual import: [gyro\_revolution\_hl2\_v1.1.vdf](gyro_revolution_hl2_v1.1.vdf)
 
 
@@ -55,7 +60,8 @@ how this control scheme works exactly.
 
 1.  Extract icon pack into game's directory (`Half-Life 2`)
 2.  Put `gyro_revolution.cfg` under the `hl2/cfg/` directory
-3.  Add line with `exec gyro_revolution` to your `autoexec.cfg` file in the same directory (`hl2/cfg`). You can use [this autoexec.cfg](autoexec.cfg) if you don't have one, instead.
+    1.  For Episodes 1 and 2, put it in the `episodic/cfg/` directory
+3.  Add a line with `exec gyro_revolution` to your `autoexec.cfg` file in the same directory (`hl2/cfg/` or `episodic/cfg/`). You can use [this autoexec.cfg](autoexec.cfg) if you don't have one.
 4.  Connect DS4 controller
 5.  Enable PlayStation Configuration Support in Big Picture, if not already enabled
 6.  Import my controller configuration (link above)
@@ -71,13 +77,13 @@ how this control scheme works exactly.
         -   Right click game in Steam library > Manage > Browse local files  
             ![img](manage_browselocalfiles.png)
     2.  Extract the [Icon Pack zip](HL2_TouchMenuIcons.zip) there. You should now have a `TouchMenuIcons` directory.
-    3.  Enter the hl2/cfg/ directory and place the [gyro\_revolution.cfg](gyro_revolution.cfg) file there.
-    4.  (optional) make a backup of your `config.cfg` file should you want to restore it later.
-    5.  Add `exec gyro_revolution` to your `autoexec.cfg` file
-        -   If you don't have an `autoexec.cfg` file, use this one: [autoexec.cfg](autoexec.cfg)
+    3.  Enter the `hl2/cfg/` directory and place the [gyro\_revolution.cfg](gyro_revolution.cfg) and [autoexec.cfg](autoexec.cfg) files there.
+        -   For Episode 1 and Episode 2, use the `episodic/cfg/` directory instead.
+        -   If you already have an `autoexec.cfg` file, you can edit it and add a line with following text: `exec gyro_revolution`
+    4.  (OPTIONAL) Make a backup of your `config.cfg` file, should you want to restore it later.
 2.  Connect your DualShock 4 to your computer. Either:
-    -   Wired using a micro USB cable
-    -   Wireless using Bluetooth
+    -   Wired, using a micro USB cable
+    -   Wireless, using Bluetooth
         -   With the DualShock 4 turned off, hold SHARE and the PS
             button to enter Bluetooth pairing mode, then pair it with the
             computer.
@@ -97,14 +103,18 @@ how this control scheme works exactly.
         ![img](bpm_startgyrocalibration.png)
     7.  Make sure the controller stays completely still until the calibration is done (about 5 seconds).
 4.  Import my configuration
-    1.  [Click here](steam://controllerconfig/220/2083662274) to open the configuration in Steam. It should open this screen:  
+    1.  Click the links below to open the configuration in Steam. Choose the one for the game you want.
+        -   [Half-Life 2](steam://controllerconfig/220/2083662274)
+        -   [Half-Life 2: Episode 1](steam://controllerconfig/380/2083662274)
+        -   [Half-Life 2: Episode 2](steam://controllerconfig/420/2083662274)
+    2.  This screen should appear:  
         ![img](bpm_configpreview.png)
-    2.  Press <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to apply, then <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to exit
-5.  (Linux only) Remove the \`libSDL2-2.0.so.0\` file in the game
-    files, under the \`bin/\` directory. It's outdated as of May 3rd
-    2020 and it can cause double input problems. The version included
-    in the Steam Runtime works fine and will automatically be used
-    instead.
+    3.  Press <img src="glyphs/ps4/square.png" alt="glyph for square" style="vertical-align: middle; max-height: 4ex"/> to apply, then <img src="glyphs/ps4/circle.png" alt="glyph for circle" style="vertical-align: middle; max-height: 4ex"/> to exit
+5.  (Linux only) Remove the `libSDL2-2.0.so.0` file in the game
+    files, under the `bin/` directory. It's outdated as of this
+    writing (2020-05-03) and it can cause double input problems. The
+    version included in the Steam Runtime works fine and will be used
+    automatically instead.
 6.  Play the game!
 
 
@@ -113,7 +123,7 @@ how this control scheme works exactly.
 # Removal
 
 1.  Remove the `exec gyro_revolution` line from your `autoexec.cfg` file
-2.  Delete `config.cfg` and possibly restore a backup of it.
+2.  Delete `config.cfg` and optionally restore a backup of it.
 
 
 <a id="controls"></a>
@@ -530,9 +540,11 @@ In this mode, the following controls are available:
 -   Sounds aren't distorted when setting host\_timescale for the
     slowdown effect. See if there's any way to do this.
 -   Add support for HL2: Update and MMOD
--   Test with Episode 1 & 2
+-   Fully test with Episode 1 & 2
 -   Port to Steam Controller
--   Port to Half-Life 1
+-   Port to Half-Life 1, Half-Life 1: Source and other similar Source
+    games.
+    -   Let me know if you have any requests!
 
 
 <a id="changelog"></a>
@@ -564,6 +576,26 @@ In this mode, the following controls are available:
 -   Add warning about SDL on Linux
 
 
+<a id="v1.1.1"></a>
+
+## v1.1.1
+
+This version only affected the cfg file and guide.
+
+-   Immediately apply changes made to sensitivity and FoV tunables
+    upon (re)loading `gyro_revolution.cfg`
+-   Fix outdated configuration link in the detailed installation. It
+    was still pointing to v1.0 by mistake.
+    -   Thank you to Mister Man for making me aware of the problem in
+        the [YouTube comments of one of my videos!](https://www.youtube.com/watch?v=ToF2aQaXvGk&lc=UgziOKD3uJfIOTVA16F4AaABAg)
+-   Add instructions on using this configuration with the Half-Life 2 Episodes
+    -   This hasn't been thoroughly tested as of this writing. It's a
+        direct reuse of the work done for Half-Life 2. The only changes
+        were the controller configuration URLs and the location of the
+        `cfg` directory.
+-   Add contact information.
+
+
 <a id="acknowledgments"></a>
 
 # Acknowledgments
@@ -573,4 +605,19 @@ In this mode, the following controls are available:
 -   The [r/SteamController](https://www.reddit.com/r/SteamController/) community
 -   Testing/debugging
     -   [Mister Man](https://www.youtube.com/channel/UCIQuALUrT-vH919klEze_vQ)
+
+
+<a id="contact"></a>
+
+# Contact
+
+You can find me at the following places (sorted by reliability):
+
+-   [YouTube channel](https://www.youtube.com/channel/UCS-CFXJoATrKHrHciwJaX9A)
+-   Email
+    -   Click "view email address" on [the YouTube about page](https://www.youtube.com/channel/UCS-CFXJoATrKHrHciwJaX9A/about)
+-   [GitHub](https://github.com/major-gnuisance)
+-   [Reddit](https://www.reddit.com/u/majorgnuisance)
+-   Discord: Major Gnuisance#7251
+-   Twitter: [@MajorGnuisance](https://twitter.com/MajorGnuisance)
 
