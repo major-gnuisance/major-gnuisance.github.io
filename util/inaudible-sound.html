@@ -19,31 +19,46 @@
         display: inline-block;
         border-radius: 1ex;
     }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr 5ex auto;
+        grid-gap: 0 1em;
+    }
+
+    input[type="checkbox"] {
+        vertical-align: middle;
+        width: 7ex;
+        height: 7ex;
+    }
   </style>
   <script type="module">
-    const status = document.getElementById("status")
     const frequencyLabel = document.getElementById("frequencyLabel")
-    const frequency = 80 // Hz
+    const gainLabel = document.getElementById("gainLabel")
+    const toRemove = document.querySelectorAll(".toRemove")
+    
     const audioContext = new AudioContext()
     
     const gain = new GainNode(audioContext)
-    gain.gain.value = 0.0005
     gain.connect(audioContext.destination)
     
     const oscillator = new OscillatorNode(audioContext)
-    oscillator.type = "sine"
-    oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
+    oscillator.type = "triangle"
     oscillator.connect(gain)
     oscillator.start()
 
     function setGain(x) {
-        gain.gain.value = x
+        const min = -90
+        const max = -40
+        let db = min + x * (max - min)
+        gainLabel.innerText = db.toFixed(1)
+        gain.gain.value = 10 ** (db / 20)
     }
 
     function setFrequency(x) {
-        const minHz = 1
-        const maxHz = 21000
-        let freq = minHz * Math.pow(maxHz / minHz, x)
+        const min = 1
+        const max = 21000
+        let freq = min * Math.pow(max / min, x)
         oscillator.frequency.setValueAtTime(freq, audioContext.currentTime)
         frequencyLabel.innerText = parseFloat(freq.toPrecision(4))
         
@@ -51,34 +66,39 @@
     
     function play() {
         audioContext.resume()
-        status.innerText = "playing"
     }
 
     function stop() {
         audioContext.suspend()
-        status.innerText = "stopped"
     }
 
-    window.play = play
-    window.stop = stop
-    window.setGain = setGain
-    window.setFrequency = setFrequency
-    document.getElementById("gain").value = gain.gain.value
+    function deleteTutorial() {
+        for (const elem of toRemove) {
+            elem.remove()
+        }
+    }
+
+    function toggle(b) {
+        b ? play() : stop()
+        deleteTutorial()
+    }
+
+    Object.assign(window, {toggle, setGain, setFrequency})
+
     stop()
-    setFrequency(0.3)
+    
+    for (const input of document.querySelectorAll('input[type="range"]'))
+        input.dispatchEvent(new Event("input"))
   </script>
 </head>
 <body>
   <article class=card>
     <h1>Inaudible Sound Player</h1>
     <p>Keep those multipoint Bluetooth headphones on their toes!</p>
-    <p>Status: <span id=status></span></p>
-    <button onclick="play()">▶</button>
-    <button onclick="stop()">⏹</button>
-    <br>
-    Volume <input type="range" id="gain" min="0.0001" max="0.005" step="any" oninput="setGain(this.value)"/> <label id="gainLabel"></label>
-    <br>
-    Frequency <input type="range" id="frequency" min="0" max="1" step="any" oninput="setFrequency(this.value)"/> <label id="frequencyLabel"></label> Hz
+    <p><label for="play">Play</label> <input type="checkbox" autocomplete="off" name="play" id="play" oninput="toggle(this.checked)" switch /> <span class="toRemove">← Turn it on!</span></p>
+    <div class="wrapper">
+      Volume <input type="range" id="gain" min="0" value="0.1" max="1" step="any" oninput="setGain(this.value)"/> <label id="gainLabel"></label> <span>dB</span>
+      Frequency <input type="range" id="frequency" min="0" value="0.2" max="1" step="any" oninput="setFrequency(this.value)"/> <label id="frequencyLabel"></label> <span>Hz</span>
+    </div class="wrapper">
   </article>
 </body>
-
