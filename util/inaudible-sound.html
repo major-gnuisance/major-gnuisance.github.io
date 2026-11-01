@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Plays some inaudible sound to keep the attention of multipoint Bluetooth headphones</title>
+  <script>
+    const frequency = 2 // Hz
+    const audioContext = new AudioContext()
+    const gain = new GainNode(audioContext)
+    let oscillator
+    gain.gain.value = 0.05;
+    gain.connect(audioContext.destination)
+
+
+    function play() {
+        if (oscillator) {
+            oscillator.disconnect()
+        }
+        oscillator = audioContext.createOscillator()
+        oscillator.type = "sine"
+        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
+        oscillator.connect(gain)
+        oscillator.start()
+    }
+
+    function stop() {
+        oscillator.stop()
+    }
+  </script>
+</head>
+<body>
+  <button onclick="play()">Play</button>
+  <button onclick="stop()">Stop</button>
+</body>
+
