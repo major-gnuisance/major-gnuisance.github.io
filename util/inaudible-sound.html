@@ -26,7 +26,7 @@
     const audioContext = new AudioContext()
     
     const gain = new GainNode(audioContext)
-    gain.gain.value = 0.05;
+    gain.gain.value = 0.0005;
     gain.connect(audioContext.destination)
     
     const oscillator = new OscillatorNode(audioContext)
