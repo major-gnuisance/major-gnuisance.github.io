@@ -24,23 +24,25 @@
     const status = document.getElementById("status")
     const frequency = 2 // Hz
     const audioContext = new AudioContext()
+    
     const gain = new GainNode(audioContext)
-    let oscillator
     gain.gain.value = 0.05;
     gain.connect(audioContext.destination)
+    
+    const oscillator = new OscillatorNode(audioContext)
+    oscillator.type = "sine"
+    oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
+    oscillator.connect(gain)
+    oscillator.start()
+
 
     function play() {
-        oscillator?.disconnect?.()
-        oscillator = audioContext.createOscillator()
-        oscillator.type = "sine"
-        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
-        oscillator.connect(gain)
-        oscillator.start()
+        audioContext.resume()
         status.innerText = "playing"
     }
 
     function stop() {
-        oscillator?.stop?.()
+        audioContext.suspend()
         status.innerText = "stopped"
     }
 
@@ -58,3 +60,4 @@
     <button onclick="stop()">⏹</button>
   </article>
 </body>
+
