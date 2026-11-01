@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>Plays some inaudible sound to keep the attention of multipoint Bluetooth headphones</title>
-  <script>
+  <title>Inaudible sound player</title>
+  <style>
+    button {
+        padding: 2em;
+        margin: 1ex;
+    }
+    body {
+        background: #969fa4;
+        font-family: sans;
+    }
+
+    .card {
+        background: #eee;
+        padding: 1em;
+        margin: 1em;
+        display: inline-block;
+        border-radius: 1ex;
+    }
+  </style>
+  <script type="module">
+    const status = document.getElementById("status")
     const frequency = 2 // Hz
     const audioContext = new AudioContext()
     const gain = new GainNode(audioContext)
@@ -10,25 +29,32 @@
     gain.gain.value = 0.05;
     gain.connect(audioContext.destination)
 
-
     function play() {
-        if (oscillator) {
-            oscillator.disconnect()
-        }
+        oscillator?.disconnect?.()
         oscillator = audioContext.createOscillator()
         oscillator.type = "sine"
         oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime)
         oscillator.connect(gain)
         oscillator.start()
+        status.innerText = "playing"
     }
 
     function stop() {
-        oscillator.stop()
+        oscillator?.stop?.()
+        status.innerText = "stopped"
     }
+
+    window.play = play
+    window.stop = stop
+    stop()
   </script>
 </head>
 <body>
-  <button onclick="play()">Play</button>
-  <button onclick="stop()">Stop</button>
+  <article class=card>
+    <h1>Inaudible Sound Player</h1>
+    <p>Keep those multipoint Bluetooth headphones on their toes!</p>
+    <p>Status: <span id=status></span></p>
+    <button onclick="play()">▶</button>
+    <button onclick="stop()">⏹</button>
+  </article>
 </body>
-
