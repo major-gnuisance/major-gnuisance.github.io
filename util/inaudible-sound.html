@@ -22,11 +22,12 @@
   </style>
   <script type="module">
     const status = document.getElementById("status")
-    const frequency = 2 // Hz
+    const frequencyLabel = document.getElementById("frequencyLabel")
+    const frequency = 80 // Hz
     const audioContext = new AudioContext()
     
     const gain = new GainNode(audioContext)
-    gain.gain.value = 0.0005;
+    gain.gain.value = 0.0005
     gain.connect(audioContext.destination)
     
     const oscillator = new OscillatorNode(audioContext)
@@ -35,7 +36,19 @@
     oscillator.connect(gain)
     oscillator.start()
 
+    function setGain(x) {
+        gain.gain.value = x
+    }
 
+    function setFrequency(x) {
+        const minHz = 1
+        const maxHz = 21000
+        let freq = minHz * Math.pow(maxHz / minHz, x)
+        oscillator.frequency.setValueAtTime(freq, audioContext.currentTime)
+        frequencyLabel.innerText = parseFloat(freq.toPrecision(4))
+        
+    }
+    
     function play() {
         audioContext.resume()
         status.innerText = "playing"
@@ -48,7 +61,11 @@
 
     window.play = play
     window.stop = stop
+    window.setGain = setGain
+    window.setFrequency = setFrequency
+    document.getElementById("gain").value = gain.gain.value
     stop()
+    setFrequency(0.3)
   </script>
 </head>
 <body>
@@ -58,6 +75,10 @@
     <p>Status: <span id=status></span></p>
     <button onclick="play()">▶</button>
     <button onclick="stop()">⏹</button>
+    <br>
+    Volume <input type="range" id="gain" min="0.0001" max="0.1" step="any" oninput="setGain(this.value)"/> <label id="gainLabel"></label>
+    <br>
+    Frequency <input type="range" id="frequency" min="0" max="1" step="any" oninput="setFrequency(this.value)"/> <label id="frequencyLabel"></label> Hz
   </article>
 </body>
 
